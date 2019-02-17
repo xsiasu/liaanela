@@ -1,0 +1,153 @@
+/* CSS Document */
+  .size_ {
+    width: fit-content;
+    margin: auto;
+    font-size: 14px;
+  }
+  .size_ img{
+    margin: 15px auto;
+    display: block;
+  }
+  .size_ table tbody td table {
+    text-align: center;
+    border: 2px solid #000;
+    border-collapse: collapse;
+
+  }
+.size_ table tbody td table tbody td:first-child{
+    width: 155px;
+    box-sizing: border-box;
+  }
+.size_ table tbody td table tbody td:nth-child(2n){
+    width: 275px;
+    box-sizing: border-box;
+  }
+.size_ table tbody td table tbody th{
+    background-color:#dadada; 
+    border-bottom: 2px solid #000;
+    font-weight: bold
+  }
+.size_ table tbody td table tbody td{
+    padding: 7px;
+  }
+.size_ table tbody td table tbody tr >:first-child{
+    border: 1px solid #000;
+  }
+.size_ table tbody td table tbody tr >:nth-child(2n){
+    border: 1px solid #000;
+  }
+
+
+ .size {
+    margin: 10px auto;
+    font-size: 14px;
+  }
+ .size tbody tr th img{
+    width: 200px;
+  }
+ .size tbody tr td table {
+  border:2px solid #000;
+    text-align: center;
+    border-collapse: collapse;
+  }
+ .size tbody td table tbody th:first-child{
+    width: 90px;
+  }
+ .size tbody td table tbody th:nth-child(2n){
+    width: 210px;
+  }
+.size tbody td table tbody th{
+    background-color:#dadada; 
+    font-weight: bold;
+  }
+ .size th,.size td{
+  text-align: center;
+    padding: 10px 0;
+  }
+ .size table tbody tr >:first-child{
+    border: 1px solid #000;
+    border-right: 2px solid #000;
+    width: 100px;
+  }
+ .size table tbody tr >:nth-child(2n){
+    border: 1px solid #000;
+    width: 200px;
+  }
+.att_title{
+  color: red;
+  font-size: 16px;
+  margin: 0;
+}
+
+
+
+#sp_space img{
+  padding-bottom: 20px;
+}
+.pc_space img{
+  padding-bottom: 30px;
+}
+
+#pagebody table ~ iframe ~ table tbody tr td table ~ table tbody tr td table tbody tr ~ tr td ~ td ~ td > img {
+  width: 40px;
+}
+
+#pagebody:nth-of-type(4n) ~ table tbody tr td table ~ table tbody tr td table tbody tr ~ tr:nth-of-type(2n) td ~ td ~ td:nth-of-type(4n) > img {
+  width: 40px;
+}
+
+.mark tbody tr:nth-of-type(2n) td:nth-of-type(2n) > img{
+width: 40px;
+}
+.mark tbody tr:nth-of-type(2n) td:last-child > img{
+width: 0px;
+}
+
+div#risFil table td a.category_itemnamelink {
+ font-size:13px;
+ line-height:1.3;
+ overflow:hidden;
+ display:block;
+ height:48px;
+ width:230px;
+ position:relative;
+ margin:-20px 0 0;
+ top:15px;
+ left:10px;
+ text-align:left
+}
+div#risFil table td span.category_itemprice {
+ font-size:23px;
+ font-weight:bold;
+ display:inline-block;
+ position:relative;
+ margin:15px 0 0
+}
+div#risFil table td span.category_itemtaxpostage {
+ display:inline-block;
+ margin:-10px 0 0;
+ font-size:16px
+}
+div#risFil table td[style] img[align="absmiddle"] {
+ position:relative;
+ left:-115px;
+ top:10px
+}
+div#risFil table td[style] {
+ font-size:0px
+}
+div#risFil table td[style] {
+ height:150px
+}
+#risFil .categoryWindowImg {
+ width:250px;
+ height:250px
+}
+/* 価格 */
+.price1 , .price2{font-size: 24px !important; font-weight:bold; line-height:44px; letter-spacing:1.1; margin-right:10px; color:#c00 !important;}
+
+/* 商品売価 */
+span.category_itemtaxpostage {font-size:10px!important;} /* 送料・税込の非表示 */
+span.category_itemprice {color:#bf0000;font-size:24px;font-weight:bold;} /* 価格 */
+table{z-index:0;} 
+span.category_itemprice:before{content:"PRICE ";font-size:10px;} 

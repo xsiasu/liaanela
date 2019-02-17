@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="https://www.rakuten.ne.jp/gold/liaanela/common/css/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://www.rakuten.ne.jp/gold/liaanela/common/css/swiper.css">
+	<!-- drawer.css -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+	<!-- jquery & iScroll -->
+	<script
+		src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+	<!-- drawer.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.js"></script>
+		<script type="text/javascript" src="https://www.rakuten.ne.jp/gold/liaanela/common/js/common.js"></script>
+</head>
+<body class="drawer drawer--left">
+
+<footer>
+	<div class="sp_footer">
+		<img class="ft_logo" src="https://www.rakuten.ne.jp/gold/liaanela/common/images/logo.png">
+		<p class="pagetop"><a href="/index.html#sp_wrap" target="_top">▲</a></p>
+		<ul class="ft_nav">
+			<li><a href="https://www.rakuten.co.jp/liaanela/info.html#companyInfo" target="_top"><i class="fas fa-store-alt"></i>店舗概要</a></li>
+			<li><a href="https://www.rakuten.co.jp/liaanela/news.html" target="_top"><i class="far fa-envelope"></i>メルマガ登録</a></li>
+			<li><a href="https://ask.step.rakuten.co.jp/inquiry-form/?page=simple-inquiry-top&act=login&ms=500&shop_id=366223" target="_top"><i class="far fa-comment-alt"></i>お問い合わせ</a></li>
+			<li><a href="https://www.rakuten.co.jp/liaanela/info.html#shipping" target="_top"><i class="fas fa-truck"></i>配送について</a></li>
+			<li><a href="https://www.rakuten.co.jp/liaanela/info.html#companyReturn" target="_top"><i class="fas fa-exchange-alt"></i>返品・交換について</a></li>
+			<li><a href="https://www.rakuten.co.jp/liaanela/info.html#companyPayment" target="_top"><i class="fas fa-yen-sign"></i>お支払いについて</a></li>
+			<li><a href="https://www.rakuten.ne.jp/gold/liaanela/faq.html" target="_top"><i class="far fa-question-circle"></i>よくあるご質問</a></li>
+			<li></li>
+		</ul>
+
+		<div class="contact">
+			<p class="c_title fw_bd">お問い合わせ</p>
+			<p class="contact_app"><i class="fas fa-phone-volume"></i>048-915-1221</p>
+			<p>受付時間 10:00～17:00(土日祝定休)</p>
+			<p class="contact_app"><i class="far fa-envelope"></i>info@lia-anela.com</p>
+			<p>２営業日以内に返信いたします。</p>
+			<p>万が一返信がない場合は、再度ご連絡ください。</p>
+		</div>
+
+	</div>
+	<div class="signature">
+		© 2018 LIA ANELA
+	</div>  
+</footer>
+
+	<script src="../common/js/swiper.js"></script>
+	<script type="text/javascript" src="../common/js/common.js"></script>
+
+<script>
+$(document).ready(function() {
+  var pagetop = $('.pagetop');
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 100) {
+            pagetop.fadeIn();
+       } else {
+            pagetop.fadeOut();
+            }
+       });
+       pagetop.click(function () {
+           $('body, html').animate({ scrollTop: 0 }, 500);
+              return false;
+   });
+});
+</script>
+</body>
+</html>

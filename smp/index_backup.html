@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../common/css/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<link rel="stylesheet" href="../common/css/swiper.css">
+	<!-- drawer.css -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+	<!-- jquery & iScroll -->
+	<script
+		src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+	<!-- drawer.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+		<script type="text/javascript" src="../common/js/common.js"></script>
+</head>
+<body class="drawer drawer--left">
+	<div></div>
+
+  <div class="sp_header">
+		<h1><a href="/"><img src="../common/images/logo.png"></a></h1>
+		<a href="https://basket.step.rakuten.co.jp/rms/mall/bs/cartall/" class="sp_cart" target="_top"><img src="../common/images/sp/cart.png"></a>
+	</div>
+	<div class="drawer-nav" role="navigation">
+		<ul class="drawer-menu sp_side"></ul>
+  <header role="banner">
+    <button type="button" class="drawer-toggle drawer-hamburger">
+
+      <span class="drawer-hamburger-icon"></span>
+    </button>
+    <nav class="drawer-nav" role="navigation">
+	    <div class="nav_inner">
+				<div class="side_nav_search sp_side_nav">
+		    	<p class="side_title_add">SEARCH</p>
+			    <form id="form_sp" action="https://esearch.rakuten.co.jp/rms/sd/esearch/vc" method="get" accept-charset="EUC-JP" target="_top" name="searchform">
+			      <input type="hidden" name="sv" value="6">
+			      <!--店舗ID-->
+			      <input type="hidden" name="sid" value="366223">
+			      <!--店舗URL-->
+			      <input type="hidden" name="su" value="liaanela">
+			      <!--店舗名-->
+			      <input type="hidden" name="sn" value="LIA ANELA">
+			      <input type="hidden" name="f" value="A">
+			      <input type="text" name="sitem" id="sbox_sp" class="formtext">
+			      <button onclick="document.charset='euc-jp'; document.TG.submit(); document.charset='UTF-8';" type="submit" value="search" id="sbtn_sp"><i class="fas fa-search"></i></button>
+			    </form>
+			    <div class="tag"><a href="" target="_top">送料無料</a></div>
+			  </div>
+				<div class="side_nav_search sp_side_nav">
+				  <dt class="side_title">NEW ARRIVAL</dt>
+				  <dd>
+					  <ul>
+					    <li><a href="">新着アイテム <p class="up_new"></p></a></li>
+					    <li><a href="">再入荷アイテム<p class="up_new"></p></a></li>
+					  </ul>
+					</dd>
+				</div>
+
+				<div class="side_nav_search sp_side_nav">
+				  <dt class="side_title">LIMITED ITEM</dt> 
+			    <dd>
+			    	<ul>
+					    <li><a href="https://search.rakuten.co.jp/search/mall/?f=2&sid=366223" target="_top">送料無料</a></li>
+					    <li><a href="https://www.rakuten.ne.jp/gold/liaanela/ranking/" target="_top">ランキング</a></li>
+					    <li><a href="">残りわずか</a></li>
+					    <li><a href="">セット販売・福袋</a></li>
+			    	</ul>
+			    </dd>
+				</div>
+				<div class="side_nav_search sp_side_nav">
+				  <dt class="side_title">CATEGORY</dt> 
+				  <dd>
+					  <ul>
+					    <li class="fw_bd"><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000103/">アウター<p class="pickup">PICK UP</p></a></li>
+					    <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000109/">ジャケット</a></li>
+					    <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000108/">コート</a></li>
+					    <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000127/">ダウン</a></li>
+					    <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000112/">その他アウター</a></li>
+					    <li class="fw_bd"><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000104/">トップス</a></li>
+					    <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000120/">Tシャツ・カットソー</a></li>
+					    <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000128/">カーディガン</a></li>
+					    <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000118/">シャツ・ブラウス</a></li>
+					    <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000119/">ニット<p class="pickup">PICK UP</p></a></li>
+					    <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000121/">その他トップス</a></li>
+					    <li class="fw_bd"><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000105/">ボトムス</a></li>
+					    <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000113/">パンツ</a></li>
+					    <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000129/">ワイドパンツ</a></li>
+					    <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000114/">スカート</a></li>
+					    <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000117/">その他ボトムス</a></li>
+					    <li class="fw_bd"><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000107/">セットアップ</a></li>
+					    <li class="fw_bd"><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000106/">ワンピース</a></li>
+					    <li class="fw_bd"><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000130/">ドレス</a></li>
+					    <li class="fw_bd"><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000100/">アクセサリー</a></li>
+					    <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000101/">ピアス・イヤリング</a></li>
+					    <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000135/">ネックレス</a></li>
+					    <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000136/">ブレスレット</a></li>
+					    <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000137/">ヘアアクセサリー</a></li>
+					    <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000138/">その他アクセサリー</a></li>
+					    <li class="fw_bd"><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000124/">小物</a></li>
+					    <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000133/">バッグ</a></li>
+					    <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000134/">その他小物</a></li>
+					    <li class="fw_bd"><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000131/">ルームウェア</a></li>
+					    <li class="fw_bd"><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000132/">水着</a></li>
+					  </ul>
+				  </dd>
+				</div>
+
+				<div class="side_nav_search sp_side_nav">
+				  <dt class="side_title">PRICE</dt> 
+				  <dd>
+					  <ul>
+					    <li><a target="_top" href="https://search.rakuten.co.jp/search/mall/?max=1000&sid=366223">～¥1,000</a></li>
+					    <li><a target="_top" href="https://search.rakuten.co.jp/search/mall/?max=3000&min=1001&sid=366223">¥1,001～¥3,000</a></li>
+					    <li><a target="_top" href="https://search.rakuten.co.jp/search/mall/?max=5000&min=3001&sid=366223">¥3,001～¥5,000</a></li>
+					    <li><a target="_top" href="https://search.rakuten.co.jp/search/mall/?max=10000&min=5001&sid=366223">¥5,001～¥10,000</a></li>
+					    <li><a target="_top" href="https://search.rakuten.co.jp/search/mall/?max=15000&min=10001&sid=366223">¥10,001～¥15,000</a></li>
+					    <li><a target="_top" href="https://search.rakuten.co.jp/search/mall/?min=15001&sid=366223">¥15,001～</a></li>
+					  </ul>
+					</dd>
+				</div>
+
+				<div class="side_nav_searc sp_side_nav">
+				  <dt class="side_title">COLOR</dt> 
+				  <dd>
+					  <div class="col">
+					    <a target="_top" href="https://search.rakuten.co.jp/search/mall/-/-/tg1000873/?sid=366223"><img src="../common/images/white.png" alt="ホワイト"></a>
+					    <a target="_top" href="https://search.rakuten.co.jp/search/mall/-/-/tg1000886/?sid=366223"><img src="../common/images/black.png" alt="ブラック"></a>
+					    <a target="_top" href="https://search.rakuten.co.jp/search/mall/-/-/tg1000881/?sid=366223"><img src="../common/images/gray.png" alt="グレー"></a>
+					    <a target="_top" href="https://search.rakuten.co.jp/search/mall/-/-/tg1000883/?sid=366223"><img src="../common/images/brown.png" alt="ブラウン"></a>
+					   <a target="_top" href="https://search.rakuten.co.jp/search/mall/-/-/tg1000878/?sid=366223"> <img src="../common/images/beige.png" alt="ベージュ"></a>
+					  </div>
+					  <div class="col">
+					    <a target="_top" href="https://search.rakuten.co.jp/search/mall/-/-/tg1000884/?sid=366223"><img src="../common/images/green.png" alt="グリーン"></a>
+					    <a target="_top" href="https://search.rakuten.co.jp/search/mall/-/-/tg1000885/?sid=366223"><img src="../common/images/blue.png" alt="ブルー"></a>
+					    <a target="_top" href="https://search.rakuten.co.jp/search/mall/-/-/tg1000882/?sid=366223"><img src="../common/images/purple.png" alt="パープル"></a>
+					    <a target="_top" href="https://search.rakuten.co.jp/search/mall/-/-/tg1000874/?sid=366223"><img src="../common/images/yellow.png" alt="イエロー"></a>
+					    <a target="_top" href="https://search.rakuten.co.jp/search/mall/-/-/tg1000876/?sid=366223"><img src="../common/images/pink.png" alt="ピンク"></a>
+					  </div>
+					  <div class="col">
+					    <a target="_top" href="https://search.rakuten.co.jp/search/mall/-/-/tg1000877/?sid=366223"><img src="../common/images/red.png" alt="レッド"></a>
+					    <a target="_top" href="https://search.rakuten.co.jp/search/mall/-/-/tg1000875/?sid=366223"><img src="../common/images/orange.png" alt="オレンジ"></a>
+					    <a target="_top" href="https://search.rakuten.co.jp/search/mall/-/-/tg1000879/?sid=366223"><img src="../common/images/silver.png" alt="シルバー"></a>
+					    <a target="_top" href="https://search.rakuten.co.jp/search/mall/-/-/tg1000880/?sid=366223"><img src="../common/images/gold.png" alt="ゴールド"></a>
+					    <a target="_top" href="https://search.rakuten.co.jp/search/mall/-/-/tg1000887/?sid=366223"><img src="../common/images/pattern.png" alt="マルチカラー"></a>
+					  </div>
+				  </dd
+				</div>
+				<div class="side_nav_search">
+					<p class="side_title_add">SOCIAL</p>
+					<ul>
+						<li><a href="https://pt-br.facebook.com/liaanela/"><i class="fab fa-facebook"></i>Facebook</a></li>
+						<li><a href="https://www.instagram.com/lia_anela_official/"><i class="fab fa-instagram"></i>Instagram</a></li>
+					</ul>
+				</div>
+		  </div>
+    </nav>
+  </header>
+
+
+	</div>
+  <div class="hd_ctg">
+  	<ul class="htc_wrap ">
+  		<li><a href="">
+  			<img src="../common/images/sp/new.png">
+  			<p>NEW</p>
+  		</a></li>
+   		<li><a href="">
+  			<img src="../common/images/sp/sale.png">
+  			<p>SALE</p>
+  		</a></li>
+   		<li><a href="">
+  			<img src="../common/images/sp/rank.png">
+  			<p>RANK</p>
+  		</a></li>
+  		<li><a href="">
+  			<img src="../common/images/sp/pick.png">
+  			<p>PICK UP</p>
+  		</a></li>
+  	</ul>
+  </div>
+	<div class="sp_swiper-container">
+	  <div class="swiper-wrapper">
+	    <div class="swiper-slide"><img src="../common/images/main.png" alt="LIA ANELA"></div>
+	    <div class="swiper-slide"><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000103/"><img src="../common/images/outer.jpg" alt="アウター 特集"></a></div>
+	    <div class="swiper-slide"><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000114/"><img src="../common/images/skirts.jpg" alt="スカート 特集"></a></div>
+	    <div class="swiper-slide"><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000104/"><img src="../common/images/tops.jpg" alt="トップス 特集"></a></div>
+	    <div class="swiper-slide"><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000130/"><img src="../common/images/dress.jpg" alt="ドレス 特集"></a></div>
+	    <div class="swiper-slide"><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000101/"><img src="../common/images/Earrings.jpg" alt="ピアス イヤリング 特集"></a></div>
+	    <div class="swiper-slide"><a href="https://item.rakuten.co.jp/liaanela/c/0000000140/" target="_top"><img src="../common/images/parlacce.jpg" alt="パール アクセサリー 特集"></a></div>
+	    <div class="swiper-slide"><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000113/"><img src="../common/images/pants1.jpg" alt="パンツ 特集"></a></div>
+	    <div class="swiper-slide"><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000100/"><img src="../common/images/acce.png" alt="ワンポイント アクセサリー 特集"></a></div>
+	    <div class="swiper-slide"><a href="https://item.rakuten.co.jp/liaanela/c/0000000139/" target="_top"><img src="../common/images/bekkoh.png" alt="アクセサリー べっ甲 特集"></a></div>
+	   
+	  </div>
+	  <div class="swiper-pagination"></div>
+	  <div class="swiper-button-prev"></div>
+	  <div class="swiper-button-next"></div>
+	</div>
+	<div class="sp_contents">
+		<div class="nws_tbl">
+		<table>
+			<tbody>
+				<tr>
+					<td>【お知らせ】</td>
+					<td>お知らせテキストお知らせテキストお知らせテキストお知らせテキスト</td>
+				</tr>
+				<tr>
+					<td>【お知らせ】</td>
+					<td>お知らせテキストお知らせテキスト</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</div>
+  <div class="sp_contents">
+  	<p class="sp_cts_title">NEW ITEM</p>
+    <a class="more" href="">MORE<i class="fas fa-angle-double-right"></i></a>
+  </div>
+  <div class="sp_contents">
+  	<p class="sp_cts_title">RANKING <span class="update">00/00 update</span></p>
+    <a class="more" href="">MORE<i class="fas fa-angle-double-right"></i></a>
+  </div>
+
+
+	<div class="sp_contents wd_cts">
+		<p class="sp_cts_title">	PICK UP</p>
+		<ul class="htc_wrap">
+			<li><a href="">
+				<p>00/00 </p>
+				<img src="" class="wd_img">
+				<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+				<p class="align_r">¥0,000(税込)</p>
+			</a></li>	
+			<li><a href="">
+				<p>00/00 </p>
+				<img src="" class="wd_img">
+				<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+				<p class="align_r">¥0,000(税込)</p>
+			</a></li>	
+			<li><a href="	">
+				<p>00/00 </p>
+				<img src="" class="wd_img">
+				<p>サンプルテキストサンプルテキストサンプルテキスト</p>
+				<p class="align_r">¥0,000(税込)</p>
+			</a></li>	
+			<li><a href="	">
+				<p>00/00 </p>
+				<img src="" class="wd_img">
+				<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+				<p class="align_r">¥0,000(税込)</p>
+			</a></li>	
+		</ul>
+    <a class="more" href="">MORE<i class="fas fa-angle-double-right"></i></a>
+	</div>
+	<div class="sp_contents">
+	<p class="sp_cts_title">TOPICS</p>
+		<ul class="htc_wrap">
+			<li class="htc_item">
+				<a href="" class="flex">
+					<i class="fas fa-angle-right"></i>
+
+					<div class="htc_img">
+						<img src="../common/images/main.png">
+					</div>
+					<div class="htc_text">
+						<p class="date">00/00 update<span class="border_o">特集</span><span class="border_yg">特集</span></p>
+						<p class="htc_title">タイトルテキスト </p>
+						<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+					</div>
+				</a>
+			</li>
+			<li class="htc_item">
+				<a href="" class="flex">
+					<i class="fas fa-angle-right"></i>
+					<div class="htc_img">
+						<img src="../common/images/main.png">
+					</div>
+					<div class="htc_text">
+						<p class="date">00/00 update<span class="border_o">ITEM</span><span class="border_yg">特集</span></p>
+						<p class="htc_title">タイトルテキストタイトルテキスト </p>
+						<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+					</div>
+				</a>
+			</li>
+			<li class="htc_item">
+				<a href="" class="flex">
+					<i class="fas fa-angle-right"></i>
+					<div class="htc_img">
+						<img src="../common/images/main.png">
+					</div>
+					<div class="htc_text">
+						<p class="date">00/00 update<span class="border_o">CODE</span><span class="border_yg">特集</span></p>
+						<p class="htc_title">タイトルテキスト </p>
+						<p>テキストテキストテキストテキストタイトルテキストテキスト</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+    <a class="more" href="">MORE<i class="fas fa-angle-double-right"></i></a>
+	</div>
+	<div class="sp_contents">  
+	<p class="sp_cts_title">HOT CONTENTS</p>
+		<ul class="htc_wrap">
+			<li class="htc_item">
+				<a href="" class="flex">
+					<i class="fas fa-angle-right"></i>
+
+					<div class="htc_img">
+						<img src="../common/images/main.png">
+					</div>
+					<div class="htc_text">
+						<p class="date">00/00 update<span class="border_o">特集</span><span class="border_yg">特集</span></p>
+						<p class="htc_title">タイトルテキスト </p>
+						<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+					</div>
+				</a>
+			</li>
+			<li class="htc_item">
+				<a href="" class="flex">
+					<i class="fas fa-angle-right"></i>
+					<div class="htc_img">
+						<img src="../common/images/main.png">
+					</div>
+					<div class="htc_text">
+						<p class="date">00/00 update<span class="border_o">ITEM</span><span class="border_yg">特集</span></p>
+						<p class="htc_title">タイトルテキストタイトルテキスト </p>
+						<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+					</div>
+				</a>
+			</li>
+			<li class="htc_item">
+				<a href="" class="flex">
+					<i class="fas fa-angle-right"></i>
+					<div class="htc_img">
+						<img src="../common/images/main.png">
+					</div>
+					<div class="htc_text">
+						<p class="date">00/00 update<span class="border_o">CODE</span><span class="border_yg">特集</span></p>
+						<p class="htc_title">タイトルテキスト </p>
+						<p>テキストテキストテキストテキストタイトルテキストテキスト</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+    <a class="more" href="">MORE<i class="fas fa-angle-double-right"></i></a>
+	</div>
+	<div class="sp_contents sp_category">
+		<p class="sp_cts_title mgb_20">CATEGORY</p>
+		<ul class="htc_wrap">
+			<li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000103/">
+				<img src="../common/images/category/cate_outer.jpg" alt="アウター">
+				<p>アウター</p></a>
+			</li>
+			<li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000104/">
+				<img src="../common/images/category/cate_tops.jpg" alt="トップス">
+				<p>トップス</p></a>
+			</li>
+			 <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000105/">
+				<img src="../common/images/category/cate_pants.jpg" alt="ボトムス">
+				<p>ボトムス</p></a>
+			</li>
+			<li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000107/">
+				<img src="../common/images/category/cate_setup.jpg" alt="セットアップ">
+				<p>セットアップ</p></a>
+			</li>
+			<li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000106/">
+				<img src="../common/images/category/cate_one.jpg" alt="ワンピース">
+				<p>ワンピース</p></a>
+			</li>
+			<li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000130/">
+				<img src="../common/images/category/cate_dress.jpg" alt="ドレス">
+				<p>ドレス</p></a>
+			</li>
+			<li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000100/">
+				<img src="../common/images/category/cate_acce.jpg" alt="アクセサリー">
+				<p>アクセサリー</p></a>
+			</li>
+			<li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000134/">
+				<img src="../common/images/category/cate_komono.jpg" alt="小物">
+				<p>小物</p></a>
+			</li>
+			<li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000131/">
+				<img src="../common/images/category/cate_room.jpg" alt="ルームウェア">
+				<p>ルームウェア</p></a>
+			</li>
+			<li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000132/">
+				<img src="../" alt="水着">
+				<p>水着</p></a>
+			</li>
+		</ul>  
+	</div>
+<footer>
+	<div class="sp_footer">
+		<a href="/"><img class="ft_logo" src="../common/images/logo.png"></a>
+		<p class="pagetop"><a href="#wrap">▲</a></p>
+		<ul class="ft_nav">
+			<li><a href="https://www.rakuten.co.jp/liaanela/info.html#companyInfo" target="_top"><i class="fas fa-store-alt"></i>店舗概要</a></li>
+			<li><a href="https://www.rakuten.co.jp/liaanela/news.html" target="_top"><i class="far fa-envelope"></i>メルマガ登録</a></li>
+			<li><a href="https://ask.step.rakuten.co.jp/inquiry-form/?page=simple-inquiry-top&act=login&ms=500&shop_id=366223" target="_top"><i class="far fa-comment-dots"></i>お問い合わせ</a></li>
+			<li><a href="https://www.rakuten.co.jp/liaanela/info.html#shipping" target="_top"><i class="fas fa-truck"></i>配送について</a></li>
+			<li><a href="https://www.rakuten.co.jp/liaanela/info.html#companyReturn" target="_top"><i class="fas fa-exchange-alt"></i>返品・交換について</a></li>
+			<li><a href="https://www.rakuten.co.jp/liaanela/info.html#companyPayment" target="_top"><i class="fas fa-yen-sign"></i>お支払いについて</a></li>
+			<li><a href="https://www.rakuten.co.jp/liaanela/faq.html" target="_top"><i class="far fa-question-circle"></i>よくあるご質問</a></li>
+			<li></li>
+		</ul>
+
+		<div class="contact">
+			<p class="c_title fw_bd">お問い合わせ</p>
+			<p class="contact_app"><i class="fas fa-phone-volume"></i>048-915-1221</p>
+			<p>受付時間 10:00～17:00(土日祝定休)</p>
+			<p class="contact_app"><i class="far fa-envelope"></i>info@lia-anela.com</p>
+			<p>２営業日以内に返信いたします。</p>
+			<p>万が一返信がない場合は、再度ご連絡ください。</p>
+		</div>
+
+	</div>
+	<div class="signature">
+		© 2018 LIA ANELA
+	</div>  
+</footer>
+
+	<script src="../common/js/swiper.js"></script>
+	<script type="text/javascript" src="../common/js/common.js"></script>
+	<script>
+	$(function () {
+	  // 親メニュー処理
+	  $('.sp_side_nav dt').click(function() {
+	    // メニュー表示/非表示
+	    $(this).next('.sp_side_nav dd').slideToggle('fast');
+	  });
+
+	  $(".sp_side_nav dt").click(function(){
+	    if($(this).hasClass("check")){ // クリックされた要素がclickedクラスだったら
+	      $(this).removeClass("check");
+	    }else{
+	      $(this).addClass("check");
+	    }
+	  });
+	});
+	</script>
+<script>
+$(document).ready(function() {
+  var pagetop = $('.pagetop');
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 100) {
+            pagetop.fadeIn();
+       } else {
+            pagetop.fadeOut();
+            }
+       });
+       pagetop.click(function () {
+           $('body, html').animate({ scrollTop: 0 }, 500);
+              return false;
+   });
+});
+</script>
+</body>
+</html>

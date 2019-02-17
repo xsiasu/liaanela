@@ -1,0 +1,108 @@
+/* cal */
+/***************************
+  css reset
+***************************/
+html, body, div, span, strong, iframe, h1, h2, h3, h4, h5, h6, p, a, address, img, pre, dl, dt, dd, ol, ul, li, form, label, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+img {
+	vertical-align: bottom;
+}
+a, p, div, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6,table,tbody,tr,th,td {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+table.calendar{
+	width:100%;
+       font-size:14px;
+}
+table.calendar th {
+ text-align: center;
+  font-family:  'Noto Sans Japanese',sans-serif;
+ color: #000;
+ padding:5px 0;
+ font-weight:bold;
+ border-bottom:1px solid #D9D9D9;
+}
+table.calendar tr.control th {
+	padding:0;
+}
+table.calendar th span {
+  font-family:  'Noto Sans Japanese',sans-serif;
+ cursor: pointer;
+ color:#333;
+ display:inline-block;
+ width:33.333%;
+ padding:5px 0;
+}
+table.calendar td {
+	font-size: 14px;
+	border-bottom: 1px solid #000;
+ text-align: center;
+ padding:8px;
+ vertical-align: middle;
+  font-family:  'Noto Sans Japanese',sans-serif;
+ line-height: normal;
+}
+table.calendar tr td:last-child{
+	background-color: #FFF0D9;
+}
+table.calendar td.click {
+ cursor: pointer;
+ background-color:#FFFFFF;
+}
+table.calendar td.Today {
+ font-weight: bold;
+ text-decoration:underline;
+ color:#C7321A;
+}
+
+table.calendar td.holiday, table.calendar tr td:first-child{
+ color: #E91929!important;
+ background-color:#FFCCCD!important; /*休業日カラー*/ 
+}
+
+table.calendar td.xday {
+ font-weight: bolder;
+ color: #009999;
+ font-size: 14px;
+}
+table.calendar td.birthday {
+ font-weight: bolder;
+ color: #990000;
+ font-size: 14px;
+}
+.cal {
+	font-size:12px;
+}
+.cal .title{
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ -o-box-sizing: border-box;
+ -ms-box-sizing: border-box;
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ width: 100%;
+ padding:10px; 
+ display: inline-block;
+}
+.cal .calendar .headline .weeks{
+	font-weight: bold;	
+}
+
+.txt .holi{
+color:#CC0000; /*休業日カラー*/ 
+}
+.txt{padding-top:10px;}
+@media (max-width: 242px){
+    table.calendar td{padding:5px;}
+}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="cache-control" content="no-cache">
+<title>新着商品</title>
+<link href="//fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet" type="text/css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link href="base.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="common/css/style.css">
+<style type="text/css">
+.toolTitle{
+  color: @(Model.PcForegroundColor);/*タイトル文字色*/
+  background: @(Model.PcBackgrouondColor);/*背景色*/
+}
+.date {
+  position: relative;
+  display: inline-block;
+  padding: 0 15px;
+  width: auto;
+  min-width: 115px;
+  height: 25px;
+  color: #F6F6F6;
+  line-height: 25px;
+  text-align: center;
+  background: #19283C;
+  z-index: 0;
+  margin-bottom:20px;
+}
+.date:after {
+  content: "";
+  position: absolute;
+  bottom: -10px; left: 50%;
+  margin-left: -10px;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #19283C transparent transparent transparent;
+}
+.tool-wrap{
+    overflow:auto;
+}
+</style>
+</head>
+
+<body>
+<div class="tool-wrap">
+
+@{
+if(@Model.PcTitleType != 0){
+  if(@Model.PcTitleType == 1){
+<div class="toolTitle">
+    <p><i class="fa fa-lightbulb-o"></i>@(Model.PcTitle)</p>
+</div>
+  }else if(@Model.PcTitleType == 2){
+      <p><img src="@(Model.PcTitleImageName)"></p>
+  }
+}
+}
+
+<div class="newBox">
+@foreach(var New in @Model.LightShopProducts) {
+    var NameNum = 34;//カット文字数
+    string ItemName = New.Name;
+    if(New.OriginalName != null){ ItemName = New.OriginalName;}
+    if(ItemName.Length > NameNum){ ItemName = ItemName.Substring(0,NameNum) + "..."; }
+    string salePrice = String.Format("{0:#,0}", New.Price);
+    var itemCount = Model.LightShopProducts;
+    string Date = String.Format("{0:MM/dd}", New.DateCreated);
+    
+    <dl>
+      <dd class="date">@(Date) 入荷</dd>
+      <dt><img src="@(New.ImageUrl)" /></dt>
+      <dd class="itemName">@Raw(ItemName)</dd>
+      <dd class="itemPrice"><strong>@(salePrice)</strong>円</dd>
+      <dd class="link"><a href="@(New.ProductUrl)" target="_top">more</a></dd>
+    </dl>
+    }
+
+</div>
+<!--//newBox-->
+</div>
+
+<iframe src="https://www.rakuten.ne.jp/gold/liaanela/rakuraku/calendar20946/" id="calendar20946" width="1200" height="400" scrolling="no" frameborder="0" ></iframe>
+
+
+
+</body>
+</html>

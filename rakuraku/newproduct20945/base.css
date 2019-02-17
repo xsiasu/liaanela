@@ -1,0 +1,139 @@
+/***************************
+  css reset
+***************************/
+html, body, div, span, strong, iframe,
+h1, h2, h3, h4, h5, h6, p,
+a, address, img, pre,
+dl, dt, dd, ol, ul, li,
+form, label,
+table, caption, tbody, tfoot, thead, tr, th, td{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+}
+ol, ul {
+    list-style: none;
+}
+img{
+	vertical-align: bottom;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a, p, div, ul, li, dl, dt, dd,
+h1, h2, h3, h4, h5, h6{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+a:hover{
+	text-decoration:underline;
+}
+body {
+	font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, 'メイリオ', sans-serif;
+	font-size:12px;
+	line-height:1.5;
+}
+
+/***************************
+  title
+***************************/
+.toolTitle{
+	overflow: hidden;
+	padding:5px;
+}
+.toolTitle p {
+    font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, 'メイリオ', sans-serif;
+    font-size:18px;
+}
+.toolTitle p span{
+    margin-right:5px;
+}
+
+
+/***************************
+  contents
+***************************/
+.newBox{
+	overflow:hidden;
+	letter-spacing: -0.4em;
+}
+.newBox dl{
+	display:inline-block;
+	padding:10px;
+	letter-spacing: normal;
+	vertical-align: top;
+	font-size:12px;
+	position:relative;
+}
+.newBox dl dt img{
+	width:100%;
+	height:auto;
+}
+.newBox dl dt{
+	padding-bottom:5px;
+}
+.newBox dl dd.itemPrice{
+	text-align:right;
+	color: #BF0000;
+}
+.newBox dl dd.itemPrice strong{
+
+	font-weight:bold;
+	font-size:16px;
+}
+.newBox dl dd.link,
+.newBox dl dd.link a{
+	position:absolute;
+	top:0;
+	left:0;
+	display:block;
+	width:100%;
+	height:100%;
+	opacity:0;
+}
+.newBox dl{
+	width:25%;/*1行4商品の場合*/
+	/*width:20%;1行5商品の場合*/
+}
+.newBox dl:hover{
+        background:#FFFFCC;/*マウスオン時背景色*/
+}
+.toolTitle{
+	color:#ffffff;/*タイトル文字色*/
+	background:#cc0000;/*背景色*/
+}
+.date {
+	position: relative;
+        top: 15px;
+	display: inline-block;
+	padding: 0 15px;
+	width: auto;
+	min-width: 115px;
+	height: 25px;
+	color: #F6F6F6;
+	line-height: 25px;
+	text-align: center;
+	background: #19283C;
+	z-index: 0;
+}
+.date:after {
+	content: "";
+	position: absolute;
+	bottom: -10px; left: 50%;
+	margin-left: -10px;
+	display: block;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 10px 10px 0 10px;
+	border-color: #19283C transparent transparent transparent;
+}
+.itemName{
+height:54px;
+}

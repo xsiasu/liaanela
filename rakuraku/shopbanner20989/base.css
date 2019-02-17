@@ -1,0 +1,122 @@
+/***************************
+  css reset
+***************************/
+html, body, div, span, strong, iframe,
+h1, h2, h3, h4, h5, h6, p,
+a, address, img, pre,
+dl, dt, dd, ol, ul, li,
+form, label,
+table, caption, tbody, tfoot, thead, tr, th, td{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+}
+ol, ul {
+    list-style: none;
+}
+img{
+	vertical-align: bottom;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a, p, div, ul, li, dl, dt, dd,
+h1, h2, h3, h4, h5, h6{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+a:hover{
+	text-decoration:underline;
+}
+body {
+	font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, 'メイリオ', sans-serif;
+	font-size:12px;
+	line-height:1.5;
+}
+
+/***************************
+  title
+***************************/
+.toolTitle{
+	overflow: hidden;
+	padding:5px;
+}
+.toolTitle p {
+    font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, 'メイリオ', sans-serif;
+    font-size:18px;
+}
+.toolTitle p span{
+    margin-right:5px;
+}
+
+
+/***************************
+  contents
+***************************/
+.shopBnr{margin-top:10px;}
+.shopBnr ul li{margin-bottom:10px;}
+.shopBnr ul li img{
+	width:100%;
+	height:auto;
+}
+.shopBnr ul li a{display:block;}
+
+/***** slider option ********/
+.shopBnr .bx-wrapper{
+	padding:0 30px;
+	margin-top:10px;
+	position:relative;
+}
+.shopBnr .bx-wrapper .bx-viewport{
+	overflow:hidden;
+}
+.bx-pager{
+	text-align:center;
+}
+.bx-pager .bx-pager-item{
+	display:inline-block;
+}
+.bx-pager .bx-pager-item a{
+	width:12px;
+	height:12px;
+	border-radius:10px;
+	background:#CCC;
+	display:block;
+	text-indent:-9999px;
+	margin:5px;
+}
+.bx-has-controls-direction{
+	margin-top:10px;
+}
+.bx-controls-direction>a{
+    display:block;
+	text-decoration:none;
+	color:#333;
+	font: normal normal normal 14px/1 FontAwesome;
+	position:absolute;
+	top:50%;
+	margin-top:-42px;
+}
+.bx-prev{left:5px;}
+.bx-prev:before{
+	content: "\f053";
+	font-size:28px;
+}
+.bx-next{right:5px;}
+.bx-next:before{
+	content: "\f054";
+	font-size:28px;
+}
+.bxSlideContents{
+  display: none;
+}
+.bx-viewport .bxSlideContents{
+  display: block !important;
+}
+

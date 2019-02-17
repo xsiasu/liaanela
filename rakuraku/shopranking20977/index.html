@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="cache-control" content="no-cache">
+<title>ショップランキング</title>
+<link href="//fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet" type="text/css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<script src="../js/jquery.js"></script>
+<script type="text/javascript" language="javascript">
+$(window).on('load',function(){
+  var boxHeight= $('#title').height();
+    $('#tableBox').css('height',(@(Model.Height)-boxHeight-1)+'px');
+});
+</script>
+<link href='base.css' rel='stylesheet' type='text/css'>
+<style>
+.toolTitle{
+  color:@(Model.PcForegroundColor);/*タイトル文字色*/
+  background:@(Model.PcBackgrouondColor);/*背景色*/
+}
+.bx-controls-direction>a{
+  color: #666;/*矢印カラー*/
+}
+.bx-pager-item a.active{
+  background: #666;/*背景色*/
+}
+.tool-wrap{
+        height:@(Model.Height)px;
+        overflow:hidden;
+}
+</style>
+</head>
+
+<body>
+<div class="tool-wrap">
+<div id="title">
+@{
+if(@Model.PcTitleType != 0){
+  if(@Model.PcTitleType == 1){
+  <div class="toolTitle">
+  <p><i class="fa fa-star"></i>@(Model.PcTitle)</p>
+  </div>
+  }else if(@Model.PcTitleType == 2){
+      <p><img src="@(Model.PcTitleImageName)"></p>
+  }
+}
+}
+
+
+</div><!--//title-->
+<div id="tableBox">
+
+<div class="shopRankBox">
+
+    <ul class="itemSlider">
+@{int count = 1;}
+     @foreach(var item in @Model.ShopProducts) {
+        var NameNum = 34;//カット文字数
+        string ItemName = item.Name;
+        if(item.OriginalName != null){ ItemName = item.OriginalName;}
+        if(ItemName.Length > NameNum){ ItemName = ItemName.Substring(0,NameNum) + "..."; }
+  string salePrice = String.Format("{0:#,0}", item.Price);
+          <li>
+            <dl>
+            @if(count < 4){
+              <dt class="icon-king2 no@(count) ">@(count)位</dt>
+              }else{
+              <dt class="icon-king2 no4 ">@(count)位</dt>
+              }
+              <dt><img src="@(item.ImageUrl)" /></dt>
+              <dd class="itemName">@Raw(ItemName)</dd>
+              <dd class="itemPrice"><strong>@(salePrice)</strong>円</dd>
+              <dd class="link"><a href="@item.ProductUrl" target="_top">more</a></dd>
+            </dl>
+          </li>
+         if (count == 10){ break; }//表示商品数
+        count = count +1;
+     }       
+      
+    </ul>
+</div>
+<!--//shopRankBox-->
+</div><!--//tableBox-->
+</div>
+</html>

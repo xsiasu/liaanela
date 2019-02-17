@@ -1,0 +1,220 @@
+@charset "utf-8";
+/* CSS Reset*/
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,figure,
+section,nav,input,textarea,p,a,span,strong,blockquote,th,td{
+	margin:0;
+	padding:0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+a{outline:none;text-decoration:none;border:none;}
+fieldset,img{border:0;vertical-align:bottom;border:none;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul{list-style:none;}
+html{width:100%;height:100%;}
+body{
+	width:100%;
+	height:100%;
+}
+/* header menu */
+.bxSlideContents{
+  display: none;
+}
+.bx-viewport .bxSlideContents{
+  display: block !important;
+}
+
+/* ------------------------------------------------ common */
+#contents {
+	display: table;
+	width: 100%;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	box-shadow: 0 0 50px 0 rgba(0,0,0,.8);
+	-webkit-transition-property: all;
+	transition-property: all;
+	-webkit-transition-delay: .3s;
+	transition-delay: .3s;
+	-webkit-transition-duration: .5s;
+	transition-duration: .5s;
+}
+
+
+/* ------------------------------------------------ drawer menu */
+.drawer-menu {
+	box-sizing: border-box;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 300px;
+	height: 100%;
+	padding: 60px 0 20px;
+	-webkit-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: .5s;
+	transition-duration: .5s;
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+	-webkit-transform-origin: right center;
+	-ms-transform-origin: right center;
+	transform-origin: right center;
+	-webkit-transform: perspective(500px) rotateY(-90deg);
+	transform: perspective(500px) rotateY(-90deg);
+	opacity: 0;
+}
+.drawer-menu ul {
+	overflow-y: auto;
+    height: 100%;
+}
+.drawer-menu li {
+	text-align: center;
+}
+
+.drawer-menu li a {
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+	-webkit-transition: all .8s;
+	transition: all .8s;
+}
+
+.drawer-menu li a:hover {
+	color: #1a1e24;
+	background: #fff;
+}
+
+/* ------------------------------------------------ checkbox */
+.check {
+	display: none;
+}
+
+/* ------------------------------------------------ menu button */
+.menu-btn {
+	position: fixed;
+	display: block;
+	top: 0px;
+	right: 0px;
+	display: block;
+	width: 60px;
+	height: 40px;
+	font-size: 10px;
+	text-align: center;
+	cursor: pointer;
+	z-index: 3;
+}
+
+.bar {
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	display: block;
+	width: 23px;
+	height: 2px;
+	-webkit-transition: all .5s;
+	transition: all .5s;
+	-webkit-transform-origin: left top;
+	-ms-transform-origin: left top;
+	transform-origin: left top;
+}
+
+.bar.middle {
+	top: 17px;
+	opacity: 1;
+}
+
+.bar.bottom {
+	top: 24px;
+	-webkit-transform-origin: left bottom;
+	-ms-transform-origin: left bottom;
+	transform-origin: left bottom;
+}
+
+.menu-btn__text {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	text-align:center;
+	width: 60px;
+	-webkit-transition: all .5s;
+	transition: all .5s;
+	display: block;
+	visibility: visible;
+	opacity: 1;
+}
+
+.close-menu {
+	position: fixed;
+	top: 0;
+	right: 300px;
+	width: 100%;
+	height: 100vh;
+	-webkit-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: .3s;
+	transition-duration: .3s;
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+	visibility: hidden;
+	opacity: 0;
+}
+
+/* ------------------------------------------------ checked */
+.check:checked ~ .drawer-menu {
+	-webkit-transition-delay: .3s;
+	transition-delay: .3s;
+	-webkit-transform: none;
+	-ms-transform: none;
+	transform: none;
+	opacity: 1;
+	z-index: 2;
+}
+
+.check:checked ~ #contents {
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+	-webkit-transform: translateX(-300px);
+	-ms-transform: translateX(-300px);
+	transform: translateX(-300px);
+}
+
+.check:checked ~ .menu-btn .menu-btn__text {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.check:checked ~ .menu-btn .bar.top {
+	width: 43px;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.check:checked ~ .menu-btn .bar.middle {
+	opacity: 0;
+}
+
+.check:checked ~ .menu-btn .bar.bottom {
+	width: 43px;
+	top: 40px;
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.check:checked ~ .close-menu {
+	-webkit-transition-duration: 1s;
+	transition-duration: 1s;
+	-webkit-transition-delay: .3s;
+	transition-delay: .3s;
+	background: rgba(0,0,0,.5);
+	visibility: visible;
+	opacity: 1;
+	z-index: 3;
+}

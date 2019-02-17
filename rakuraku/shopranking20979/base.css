@@ -1,0 +1,204 @@
+/***************************
+  css reset
+***************************/
+html, body, div, span, strong, iframe, h1, h2, h3, h4, h5, h6, p, a, address, img, pre, dl, dt, dd, ol, ul, li, form, label, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+ol, ul {
+	list-style: none;
+}
+img {
+	vertical-align: bottom;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a, p, div, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6 {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+a:hover {
+	text-decoration: underline;
+}
+body {
+	font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, 'メイリオ', sans-serif;
+	font-size: 12px;
+	line-height: 1.5;
+}
+/*******************************
+
+font
+
+********************************/
+[class^="icon-"], [class*=" icon-"] {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: translate(0, 0);
+}
+.icon-king:before {
+	content: "\f080";
+padding-right: 5px;
+}
+.icon-king2:before {
+	content: "\f091";
+padding-right: 5px;
+}
+.shopRankBox .icon-king2{
+	font-size: 20px;
+}
+.shopRankBox .icon-king2 {
+        font-weight: bold;
+	color: #333333;
+	font-size: 16px;
+}
+.shopRankBox .icon-king2.no1 {
+	font-weight: bold;
+	color: #E5BA31;
+	font-size: 20px;
+}
+.shopRankBox .icon-king2.no2 {
+	font-weight: bold;
+	color: #8E8E8E;
+	font-size: 18px;
+}
+.shopRankBox .icon-king2.no3 {
+	font-weight: bold;
+	color: #B06E4D;
+	font-size: 16px;
+}
+
+/***************************
+  title
+***************************/
+.toolTitle {
+	overflow: hidden;
+	padding: 5px;
+}
+.toolTitle p {
+	font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, 'メイリオ', sans-serif;
+	font-size: 18px;
+}
+.toolTitle p span {
+	margin-right: 5px;
+}
+/***************************
+  contents
+***************************/
+.shopRankBox {
+width:1140px;
+	overflow: hidden;
+	margin-top:10px;
+ display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+}
+.shopRankBox dl {
+width:49%;
+	padding: 5px;
+	font-size: 16px;
+	position: relative;
+border-top: 1px #CCC dotted;
+margin-bottom:-1px;
+	border-bottom: 1px #CCC dotted;
+	overflow:hidden;
+}
+.shopRankBox dl dt img {
+
+	width: 85%;
+	height: auto;
+}
+.shopRankBox dl dt {
+	padding: 10px 0;
+	width:40%;
+	float:left;
+}
+.shopRankBox dl dd {
+	padding: 10px 0;
+	width:59%;
+	float:right;
+font-size:14px;
+  font-family:  'Noto Sans Japanese',sans-serif;
+
+}
+.shopRankBox dl dd.itemName span{
+	display:block;
+	margin-bottom:5px;
+}
+.shopRankBox dl dd.itemPrice {
+	text-align: right;
+font-size:14px;
+	color: #BF0000;
+}
+.shopRankBox dl dd.itemPrice strong {
+
+	font-weight: bold;
+	font-size: 18px;
+}
+.shopRankBox dl dd.link, .shopRankBox dl dd.link a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+#tableBox{overflow-y:auto;}
+
+@media screen and (max-width:768px) {
+  .shopRankBox{
+width:100%;
+	display: block;
+  }
+  .shopRankBox dl{
+ width:100%;
+      font-size:12px;
+   }
+   .shopRankBox dl dd{
+      padding-bottom:0;
+      padding-right:10px;
+      font-size:12px;
+   }
+.shopRankBox .icon-king2{
+	font-size: 16px;
+}
+.shopRankBox .icon-king2 {
+        font-weight: bold;
+	color: #333333;
+	font-size: 13px;
+}
+.shopRankBox .icon-king2.no1 {
+	font-weight: bold;
+	color: #E5BA31;
+	font-size: 16px;
+}
+.shopRankBox .icon-king2.no2 {
+	font-weight: bold;
+	color: #8E8E8E;
+	font-size: 15px;
+}
+.shopRankBox .icon-king2.no3 {
+	font-weight: bold;
+	color: #B06E4D;
+	font-size: 14px;
+}
+#tableBox{
+	height: 1700px !important;
+}
+.tool-wrap{
+	height: 1650px !important;
+}
+}
+

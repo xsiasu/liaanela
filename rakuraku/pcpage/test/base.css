@@ -1,0 +1,15 @@
+#rakurakuTable{width:1080px;}/*ヘッダー幅*/
+#rakurakuSideBlock{width:200px;}/*レフトナビゲーション幅*/
+#rakurakuContentsBlock{width:860px;}/*メインコンテンツ幅*/
+#rakurakuFootBlock{width:1080px;}/*フッター幅*/
+  <link rel="stylesheet" type="text/css" href="https://www.rakuten.ne.jp/gold/liaanela/common/css/style.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.rakuten.co.jp/liaanela/common/css/swiper.css">
+  <link rel="shortcut icon" href="https://www.rakuten.ne.jp/gold/liaanela/common/images/favicon.ico">
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://www.rakuten.co.jp/liaanela/common/js/common.js"></script>
+

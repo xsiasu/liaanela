@@ -1,0 +1,40 @@
+/***************************
+  css reset
+***************************/
+html, body, div, span, strong, iframe,
+h1, h2, h3, h4, h5, h6, p,
+a, address, img, pre,
+dl, dt, dd, ol, ul, li,
+form, label,
+table, caption, tbody, tfoot, thead, tr, th, td{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+}
+ol, ul {
+    list-style: none;
+}
+img{
+	vertical-align: bottom;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a, p, div, ul, li, dl, dt, dd,
+h1, h2, h3, h4, h5, h6{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+a:hover{
+	text-decoration:underline;
+}
+body {
+	font-size:12px;
+	line-height:1.5;
+}

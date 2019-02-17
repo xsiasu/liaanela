@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+	<link rel="stylesheet" type="text/css" href="../common/css/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<link rel="stylesheet" href="../common/css/swiper.css">
+	<!-- drawer.css -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+	<!-- jquery & iScroll -->
+	<script
+		src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+	<!-- drawer.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+		<script type="text/javascript" src="../common/js/common.js"></script>
+	<script>
+		//共通パーツ読み込み
+ 		$(function() {
+			$("#header").load("sp_header.html");
+			$("#main").load("sp_main.html");
+			$("#footer").load("sp_footer.html");
+		});
+	</script>
+</head>
+<body class="drawer drawer--left">
+<div id="header"></div>
+
+<div id="main"></div>
+
+<div id="footer"></div>
+
+	<script src="../common/js/swiper.js"></script>
+	<script type="text/javascript" src="../common/js/common.js"></script>
+	<script>
+	$(function () {
+	  // 親メニュー処理
+	  $('.sp_side_nav dt').click(function() {
+	    // メニュー表示/非表示
+	    $(this).next('.sp_side_nav dd').slideToggle('fast');
+	  });
+
+	  $(".sp_side_nav dt").click(function(){
+	    if($(this).hasClass("check")){ // クリックされた要素がclickedクラスだったら
+	      $(this).removeClass("check");
+	    }else{
+	      $(this).addClass("check");
+	    }
+	  });
+	});
+	</script>
+<script>
+$(document).ready(function() {
+  var pagetop = $('.pagetop');
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 100) {
+            pagetop.fadeIn();
+       } else {
+            pagetop.fadeOut();
+            }
+       });
+       pagetop.click(function () {
+           $('body, html').animate({ scrollTop: 0 }, 500);
+              return false;
+   });
+});
+</script>
+</body>
+</html>
