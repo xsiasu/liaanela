@@ -38,7 +38,7 @@ a {
 .section-announce {
   background: #189dff; }
 
-.section-imagebar .row .col {
+.section-imagebar .row .col-sm {
   padding: 0; }
 
 .section-imagebar .imagebar-01 .item {
