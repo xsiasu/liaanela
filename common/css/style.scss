@@ -1,0 +1,85 @@
+a {
+    color:#3d4246
+}
+
+$primary-bgColor : #189dff;
+
+$imagebar-color-01:#96d2dc;
+$imagebar-color-02:#dddede;
+$imagebar-color-03:#eeced2;
+$imagebar-color-04:#e2e2e2;
+.section-imagebar .item{
+    height:475px;
+}
+.list-inline > li {display:inline-block;
+a {
+    font-family: Montserrat, sans-serif
+}}
+
+
+
+.site-nav__label{
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    height: 44px;
+    padding: 0 5px;
+    font-family: Montserrat, sans-serif;
+}
+.site-nav__label:hover:after {
+    width: 100%;
+}
+.site-nav__label:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    color: transparent;
+    background: #0099ff;
+    height: 3px;
+}
+
+.list-category li a img {width: 100px;}
+.section-announce {
+    background:$primary-bgColor;
+}
+.section-imagebar .row .col {padding:0}
+.section-imagebar .imagebar-01 .item{
+    background: url(../../images/item-blue.jpg);
+    background-size:cover;
+    background-color:$imagebar-color-01;
+    background-position:center center
+}
+.section-imagebar .imagebar-02 .item{
+    
+    background-size:cover;
+    background-color:$imagebar-color-02
+}
+.section-imagebar .imagebar-03 .item{
+    
+    background-size:cover;
+    background-color:$imagebar-color-03
+}
+.section-imagebar .imagebar-04 .item{
+    
+    background-size:cover;
+    background-color:$imagebar-color-04
+}
+.section-category .list-category {
+    position: relative;
+    overflow-x: auto;
+    min-width: 100%;
+    padding-bottom: 1px;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    text-align: center;
+}
+.tit-area {
+    padding:10px 10px;
+    .tit {
+        font-size:17px
+    }
+}
