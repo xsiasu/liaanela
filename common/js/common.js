@@ -43,3 +43,28 @@ window.addEventListener( 'touchmove' , movefun , { passive: false } );
 
 // スクロール停止することを停止する処理
 window.removeEventListener( 'touchmove' , movefun, { passive: false } );
+
+
+var header = {
+  init : function() {
+
+    let navItem = $('nav-item');
+    navItem.on('mouseenter', function(){
+      if(!$(this).hasClass("active_link")) {
+        $('.dropdown_container').hide();
+        $('.active_link').removeClass('.active_link')
+      }
+    });
+
+    navItem.on('mouseleave', function(){
+        $('.dropdown_container').hide();
+        $('.active_link').removeClass('.active_link')
+    })
+
+  }
+}
+
+
+window.onload(function(){
+  header.init();
+})
