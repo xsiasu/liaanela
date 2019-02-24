@@ -10,7 +10,7 @@
   <meta name="keywords" content="LIA ANELA ,リアアネラ,通販,ファッション,レディース,ファッション,ワンピース,パンツ,スカート,ジーンズ,ニット,ドレス,デニム,アクセサリー,ピアス,ブレスレット">
   <link rel="stylesheet" type="text/css" href="common/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="common/css/new-style.css">
-  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="common/css/swiper.css">
   <link rel="shortcut icon" href="https://www.rakuten.ne.jp/gold/liaanela/common/images/favicon.ico">
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -21,106 +21,182 @@
 
 <!-- <iframe src="header.html" width="100%" height="150" scrolling="no"></iframe> -->
 <header>
-  <section class="section-announce">
-    reopen
-  </section>  
-  <section class="container-fluid">
-    <div class="text-right">
+  <!-- announce -->
+  <section class="container-fluid inner-header-announce text-center">
+      <a href="#" class="notice">お知らせ 【OPEN】 2018.12 NEW OPEN!</a>
+  </section> 
+  <!-- util -->
+  <section class="container-fluid inner-header-middle">
+    <div class="text-left float-left social-area">
+        <a href="#"><i class="fab fa-facebook-f"></i><span class="d-none">facebook</span></a>
+        <a href="#"><i class="fab fa-instagram"></i><span class="d-none">instargram</span></a>
+        <a href="#" class="contact"><i class="fas fa-phone"></i> 048-915-1221</a>
+    </div>
+    <div class="text-right float-right util-area">
       <a href="https://www.rakuten.co.jp/liaanela/info.html" target="_top">
-        <i class="fas fa-home"></i> 店舗概要</a>
+        店舗概要</a>
       <a href="https://www.rakuten.ne.jp/gold/liaanela/index.html#guide" target="_top">
-        <i class="fas fa-exclamation-triangle"></i> お買い物ガイド</a>
+        お買い物ガイド</a>
       <a href="https://ask.step.rakuten.co.jp/inquiry-form/?page=simple-inquiry-top&act=login&ms=500&shop_id=366223" target="_top">
         <i class="far fa-comment-alt"></i> お問い合わせ</a>
       <a href="https://www.rakuten.co.jp/liaanela/news.html" target="_top">
         <i class="far fa-envelope"></i> メルマガ登録</a>
       <a href="https://basket.step.rakuten.co.jp/rms/mall/bs/cartall/" target="blank">
-        <i class="fas fa-shopping-basket"></i> カート</a>
+        <i class="fas fa-shopping-basket"></i>
+        カート</a>
       </div>
   </section>
   
-  <div class="header">
-    <div class="container">
-      <div class="logo-area">
-        <h1>
-          <a href="https://www.rakuten.ne.jp/gold/liaanela/" target="_top">
-            お手頃で可愛いお洋服をLIA ANELAがご提案!
+  
+  <section class="container inner-header">
+    <div class="logo-area">
+      <h1>
+        <a href="https://www.rakuten.ne.jp/gold/liaanela/" target="_top">
+          <img src="images/logo.png" alt="お手頃で可愛いお洋服をLIA ANELAがご提案!"> 
+        </a>
+      </h1>
+    </div>
+    <nav class="nav-area">
+        <div class="nav-mobile">
+          <a id="nav-toggle" href="#!">
+            <span></span>
           </a>
-        </h1>
-      </div>
+        </div>      
+        <ul class="list-nav list-unstyled">
+            <li class="nav-item">
+              <a href="#" class="nav-link" target="_top">
+                <span class="site-nav__label">トップス</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" target="_top">
+                <span class="site-nav__label">ボトムス <i class="fas fa-chevron-down"></i></span>
+              </a>
+              <div class="dropdown-container">
+                <a href="" class="nav-link" target="_top">スカート</a>
+                <a href="" class="nav-link" target="_top">パンツ</a>
+              </div>
+            </li>        
+            <li class="nav-item">
+              <a class="nav-link" href="#" target="_top">
+              <span class="site-nav__label">ワンピース</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" target="_top">
+                <span class="site-nav__label">セットアップ</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" target="_top">
+                <span class="site-nav__label">パーティ</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" target="_top">
+                <span class="site-nav__label">アクセサリー <i class="fas fa-chevron-down"></i></span>
+              </a>
+              <div class="dropdown-container">
+                <a href="#" class="nav-link" target="_top">ピアス・イヤリング</a>
+                <a href="#" class="nav-link" target="_top">ネックレス</a>
+                <a href="#" class="nav-link" target="_top">その他アクセサリー</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" target="_top">
+              <span class="site-nav__label">シクレバンド</span>
+              </a>
+            </li>
+        </ul>      
+    </nav>
+    <div class="srh-area">
+      <form action="https://esearch.rakuten.co.jp/rms/sd/esearch/vc" method="get" accept-charset="EUC-JP" target="_top" name="searchform">
+        <div class="form-group form-group-lia">
+        <input type="hidden" name="sv" value="6">
+        <!--店舗ID-->
+        <input type="hidden" name="sid" value="366223">
+        <!--店舗URL-->
+        <input type="hidden" name="su" value="liaanela">
+        <!--店舗名-->
+        <input type="hidden" name="sn" value="LIA ANELA">
+        <input type="hidden" name="f" value="A">
+        <input type="text" name="sitem" id="sbox1" class="form-control form-control-lia" placeholder="キーワードを入力してください" aria-describedby="button-addon2">
+        <div class="wrap-btn">
+        <button onclick="document.charset='euc-jp'; document.TG.submit(); document.charset='UTF-8';" type="submit" value="search" aria-describedby="button-addon2"><i class="fas fa-search"></i>  </button>
+        </div>
+        
+        </div>
+      </form> 
+    
+    </div> 
 
-      <nav class="nav-area">
-        <ul class="nav">
-          <li class="nav-item">
-            <a href="#" class="nav-link" target="_top">
-              <span class="site-nav__label">トップス</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" target="_top">
-              <span class="site-nav__label">ボトムス</span>
-            </a>
-            <div class="dropdown-box">
-              <a href="#" class="nav-link" target="_top">スカート</a>
-              <a href="#" class="nav-link" target="_top">パンツ</a>
-            </div>
-          </li>        
-          <li class="nav-item">
-            <a class="nav-link" href="#" target="_top">
-            <span class="site-nav__label">ワンピース</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" target="_top">
-              <span class="site-nav__label">セットアップ</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" target="_top">
-              <span class="site-nav__label">パーティ</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link dropdown-toggle" href="#" target="_top">
-              <span class="site-nav__label">アクセサリー</span>
-            </a>
-            <div class="dropdown-box">
-              <a href="#" class="nav-link" target="_top">ピアス・イヤリング</a>
-              <a href="#" class="nav-link" target="_top">ネックレス</a>
-              <a href="#" class="nav-link" target="_top">その他アクセサリー</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" target="_top">
-            <span class="site-nav__label">シクレバンド</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div>
-        <form>
-          
-        </form>
-      </div>
-
-    </div>    
-  </div>
+  </section>    
+  
 </header>
+
 
 <section class="section-imagebar">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm col-12 imagebar-01">
-        <div class="item">1</div>
+      <div class="col-md col-12 imagebar-01">
+        <div class="image-bar__item">
+            <div class="image-bar__content image-bar__overlay">
+              <div class="image-bar__text">
+                  <h3 class="image-bar__caption">Black suits</h3>         
+                  <div class="detail-description reveal-details">
+                    <p class="image-bar__caption_1">30% sale</p>         
+                    <div class="image-bar__button">
+                      <a class="btn btn-primary" href="#">Shop now</a>                        
+                    </div>
+                </div>
+              </div>        
+            </div>          
+        </div>
       </div>
-      <div class="col-sm col-12 imagebar-02">
-        <div class="item">2</div>
+      <div class="col-md col-12 imagebar-02">
+        <div class="image-bar__item">
+          <div class="image-bar__content image-bar__overlay">
+            <div class="image-bar__text">
+                <h3 class="image-bar__caption">Black suits</h3>         
+                <div class="detail-description reveal-details">
+                  <p class="image-bar__caption_1">30% sale</p>         
+                  <div class="image-bar__button">
+                    <a class="btn btn-primary" href="#">Shop now</a>                        
+                  </div>
+              </div>
+            </div>        
+          </div>          
       </div>
-      <div class="col-sm col-12 imagebar-03">
-        <div class="item">3</div>
       </div>
-      <div class="col-sm col-12 imagebar-04">
-        <div class="item"4></div>
+      <div class="col-md col-12 imagebar-03">
+        <div class="image-bar__item">
+          <div class="image-bar__content image-bar__overlay">
+            <div class="image-bar__text">
+                <h3 class="image-bar__caption">Black suits</h3>         
+                <div class="detail-description reveal-details">
+                  <p class="image-bar__caption_1">30% sale</p>         
+                  <div class="image-bar__button">
+                    <a class="btn btn-primary" href="#">Shop now</a>                        
+                  </div>
+              </div>
+            </div>        
+          </div>          
+      </div>
+      </div>
+      <div class="col-md col-12 imagebar-04">
+        <div class="image-bar__item">
+          <div class="image-bar__content image-bar__overlay">
+            <div class="image-bar__text">
+                <h3 class="image-bar__caption">Black suits</h3>         
+                <div class="detail-description reveal-details">
+                  <p class="image-bar__caption_1">30% sale</p>         
+                  <div class="image-bar__button">
+                    <a class="btn btn-primary" href="#">Shop now</a>                        
+                  </div>
+              </div>
+            </div>        
+          </div>          
+      </div>
       </div>
     </div>
   </div>
@@ -132,10 +208,6 @@
   </div>
   <div class="category-area">
       <ul class="list-inline list-unstyled list-category">
-        <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000103/">
-          <img src="common/images/category/cate_outer.jpg" alt="アウター">
-          <p>アウター</p></a>
-        </li>
         <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000104/">
           <img src="common/images/category/cate_tops.jpg" alt="トップス">
           <p>トップス</p></a>
@@ -144,60 +216,324 @@
           <img src="common/images/category/cate_pants.jpg" alt="ボトムス">
           <p>ボトムス</p></a>
         </li>
+        <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000106/">
+          <img src="common/images/category/cate_one.jpg" alt="ワンピース">
+          <p>ワンピース</p></a>
+        </li>        
         <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000107/">
           <img src="common/images/category/cate_setup.jpg" alt="セットアップ">
           <p>セットアップ</p></a>
         </li>
-        <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000106/">
-          <img src="common/images/category/cate_one.jpg" alt="ワンピース">
-          <p>ワンピース</p></a>
-        </li>
+
         <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000130/">
           <img src="common/images/category/cate_dress.jpg" alt="ドレス">
-          <p>ドレス</p></a>
+          <p>パーティ</p></a>
         </li>
         <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000100/">
           <img src="common/images/category/cate_acce.jpg" alt="アクセサリー">
           <p>アクセサリー</p></a>
         </li>
-        <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000134/">
-          <img src="common/images/category/cate_komono.jpg" alt="小物">
-          <p>小物</p></a>
-        </li>
         <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000131/">
           <img src="common/images/category/cate_room.jpg" alt="ルームウェア">
-          <p>ルームウェア</p></a>
+          <p>シクレバンド</p></a>
         </li>
-        <li><a target="_top" href="https://item.rakuten.co.jp/liaanela/c/0000000132/">
-          <img src="common/images/category/cate_swim.jpg" alt="水着">
-          <p>水着</p></a>
-        </li>
+       
       </ul>
   </div>
 </sction>
+<section>
 <div class="swiper-container">
   <div class="swiper-wrapper">
-    <div class="swiper-slide"><a href="#"><img src="common/images/slide-01.png" alt="LIA ANELA"></a></div>
+    <div class="swiper-slide slide-01">
+      <img src="images/item-shirts-pink.jpg" alt="LIA ANELA">  
+      <div class="txt-account">
+        <p class="product-tit" data-swiper-parallax-y="60%">お花見行きたいな<small>あ</small>!</p>
+        <p class="product-name" data-swiper-parallax-y="60%">Cherry blowsome skert</p>
+        <p class="product-price" data-swiper-parallax-y="60%"><strong>3,000</strong><small>円</small><a href="" class="btn btn-primary">こちら</a></p>
+      </div>  
   </div>
+  <div class="swiper-slide slide-02">
+      <img src="images/item-shirts-slide.jpg" alt="LIA ANELA">
+      <div class="txt-account">
+        <p class="product-tit" data-swiper-parallax-y="60%">お花見行きたいな<small>あ</small>!</p>
+        <p class="product-name" data-swiper-parallax-y="60%">Cherry blowsome skert</p>
+        <p class="product-price" data-swiper-parallax-y="60%"><strong>3,000</strong><small>円</small><a href="" class="btn btn-primary">こちら</a></p>
+      </div>      
+  </div>  
   <div class="swiper-pagination"></div>
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 </div>
 </section>  
+<section class="container">
+  <div class="tit-area">
+      <h1 class="tit text-center">ベストレビュー</h1>
+    </div>  
+  <div class="row">
+      <div class="col-md-4 col-12">
+        <div class="product text-center">
+          <span class="d-block"><i class="fas fa-quote-right"></i></span>
+          <img src="..." class="rounded mx-auto d-block" alt="...">
+          <div class="product-body">
+              <p class="txt-title">Some quick example text to</p>
+              <a href="#">こちら</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-12">
+          <div class="product text-center">
+              <span class="d-block"><i class="fas fa-quote-right"></i></span>
+              <img src="..." class="rounded mx-auto d-block" alt="...">
+            <div class="product-body">
+              <p class="txt-title">Some quick example text to</p>
+              <a href="#">こちら</a>
+            </div>
+          </div>
+      </div>           
+      <div class="col-md-4 col-12">
+          <div class="product text-center">
+              <span class="d-block"><i class="fas fa-quote-right"></i></span>
+              <img src="..." class="rounded mx-auto d-block" alt="...">
+              <div class="product-body">
+                <p class="txt-title">Some quick example text to</p>
+                <a href="#">- こちら -</a>
+              </div>
+          </div>
+      </div>      
+  </div>
+</section>
+<hr>
+<section class="container">
+    <div class="row">
+      <div class="col-md col-12">
+        <img src="images/item-b-skert.jpg" class="card-img" alt="...">
+      </div>
+      <div class="col-md col-12">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+</section>
+<hr>
+<sction class="section-newItems">
+    <div class="tit-area">
+      <h1 class="tit text-center">新商品</h1>
+    </div>
+    <div class="newItems-area">
+      <div class="container">
+        <ul class="row list-unstyled list-items">
+          <li class="col-md-4 col-6">
+            <a href="#">
+              <img src="images/product.jpg" width="100%">
+                <div class="txt-account">
+                  <span class="txt-product">ひらがな腹がな</span>
+                  <span class="d-block txt-price">2000<small>円</small></span>
+                </div>              
+            </a>
+          </li>
+          <li class="col-md-4 col-6">
+            <a href="#">
+              <img src="images/product.jpg" width="100%">
+                <div class="txt-account">
+                  <span class="txt-product">ひらがな腹がな</span>
+                  <span class="d-block txt-price">2000<small>円</small></span>
+                </div>              
+            </a>
+          </li>
+          <li class="col-md-4 col-6">
+            <a href="#">
+              <img src="images/product.jpg" width="100%">
+                <div class="txt-account">
+                  <span class="txt-product">ひらがな腹がな</span>
+                  <span class="d-block txt-price">2000<small>円</small></span>
+                </div>              
+            </a>
+          </li>
+          <li class="col-md-4 col-6">
+            <a href="#">
+              <img src="images/product.jpg" width="100%">
+                <div class="txt-account">
+                  <span class="txt-product">ひらがな腹がな</span>
+                  <span class="d-block txt-price">2000<small>円</small></span>
+                </div>              
+            </a>
+          </li>
+          <li class="col-md-4 col-6">
+            <a href="#">
+              <img src="images/product.jpg" width="100%">
+                <div class="txt-account">
+                  <span class="txt-product">ひらがな腹がな</span>
+                  <span class="d-block txt-price">2000<small>円</small></span>
+                </div>              
+            </a>
+          </li>
+          <li class="col-md-4 col-6">
+            <a href="#">
+              <img src="images/product.jpg" width="100%">
+                <div class="txt-account">
+                  <span class="txt-product">ひらがな腹がな</span>
+                  <span class="d-block txt-price">2000<small>円</small></span>
+                </div>              
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</sction>
+<hr>
+<sction class="section-rankingBest">
+    <div class="tit-area">
+      <h1 class="tit text-center"><i class="fas fa-crown"></i> Ranking Best9</h1>
+    </div>
+    <div class="rankingBest-area"> 
+        <div class="container">
+            <ul class="row list-unstyled list-items">
+              <li class="col-md-4 col-6">
+                <a href="#"><img src="images/product.jpg" width="100%">
+                <div class="txt-account">
+                  <span class="txt-product">ひらがな腹がな</span>
+                  <span class="d-block txt-price">2000<small>円</small></span>
+                </div>
+                </a>
+            </li>
+              <li class="col-md-4 col-6">
+                <a href="#"><img src="images/product.jpg" width="100%">
+                <div class="txt-account">
+                  <span class="txt-product">ひらがな腹がな</span>
+                  <span class="d-block txt-price">2000<small>円</small></span>
+                </div>
+                </a>
+            </li>
+              <li class="col-md-4 col-6">
+                <a href="#"><img src="images/product.jpg" width="100%">
+                <div class="txt-account">
+                  <span class="txt-product">ひらがな腹がな</span>
+                  <span class="d-block txt-price">2000<small>円</small></span>
+                </div>
+                </a>
+            </li>
+              <li class="col-md-4 col-6">
+                <a href="#"><img src="images/product.jpg" width="100%">
+                <div class="txt-account">
+                  <span class="txt-product">ひらがな腹がな</span>
+                  <span class="d-block txt-price">2000<small>円</small></span>
+                </div>
+                </a>
+            </li>
+              <li class="col-md-4 col-6">
+                <a href="#"><img src="images/product.jpg" width="100%">
+                <div class="txt-account">
+                  <span class="txt-product">ひらがな腹がな</span>
+                  <span class="d-block txt-price">2000<small>円</small></span>
+                </div>
+                </a>
+            </li>
+              <li class="col-md-4 col-6">
+                <a href="#"><img src="images/product.jpg" width="100%">
+                <div class="txt-account">
+                  <span class="txt-product">ひらがな腹がな</span>
+                  <span class="d-block txt-price">2000<small>円</small></span>
+                </div>
+                </a>
+            </li>
+            </ul>
+          </div>
+    </div>
+</sction>
+<footer>
+    <section class="container-fluid inner-footer">
+      <div class="row">
+        <div class="col-md-3 col-12 guide-area">
+          <h4 class="tit">Shopping Guide</h4>
+          <ul class="list-unstyled">
+              <li><a href="https://www.rakuten.co.jp/liaanela/info.html#shipping" target="_top">配送 について</a></li>
+              <li><a href="https://www.rakuten.co.jp/liaanela/info.html#payment" target="_top">お支払いについて</a></li>
+              <li><a href="https://www.rakuten.co.jp/liaanela/info.html#return_policy" target="_top">返品交換について</a></li>
+              <li><a href="https://www.rakuten.ne.jp/gold/liaanela/faq.html" target="_top">よくあるご質問</a></li>
+          </ul>
+          <h4 class="tit">送料について</h4>
+          <p class="">日本郵政</p>
+          <ul class="list-unstyled">
+            <li>宅配便 870円<span>(税込)</span></li>
+            <li>小型宅配便 510円<span>(税込)</span></li>
+            <li>メール便 360円<span>(税込)</span></li>
+          </ul>
+          <a href="https://www.rakuten.co.jp/liaanela/info.html#shipping" target="_top"><span>※ 詳細についてはこちらをご参照ください。</span></a>    
+        </div>
+        <div class="col-md-3 col-12 pay-area">
+          <h4 class="tit">お支払いについて</h4>
+          <p>クレジット決済(一括払い)・代引き・Apple Pay・コンビニ前払い・郵便局ATM前払い・銀行振込がご利用になれます。<br><span>※ 銀行振込の場合手数料お客様負担となります。</span></p>
+          <p>クレジットカード</p>
+          <ul class="list-unstyled list-inline list-card">
+            <li><img src="images/card-visa.png" alt="visa card" width="40px"></li>
+            <li><img src="images/card-master.png" alt="visa card" width="40px"></i></li>
+            <li><img src="images/card-jcb.png" alt="visa card" width="40px"></li>
+            <li><img src="images/card-amex.png" alt="visa card" width="40px"></li>
+            <li><img src="images/card-dineres.png" alt="visa card" width="40px"></li>
+          </ul>
+          <p>コンビニ等の前払い</p>
+          <ul class="list-inline list-unstyled">
+            <li><img src="images/convi-jppost.png" alt="jp post" width="30px"></li>
+            <li><img src="images/convi-seveneleven.png" alt="seven eleven" width="30px"></li>
+          </ul> 
+          <p>Apple Pay</p>
+          <ul class="list-unstyled">
+              <li><img src="images/pay-apple.png" alt="Apple Pay" width="50px"></li>
+          </ul>
+          <p>代金引換(現金決済のみ・代引手数料324円)</p>
+          <a href="https://www.rakuten.co.jp/liaanela/info.html#payment" target="_top"><span>※ 詳細についてはこちらをご参照ください。</span></a>
+        </div>
+        <div class="col-md-3 col-12 custom-area">
+          <div class="">
+            <h4 class="tit">返品・交換について</h4>
+            <p>お客様都合での返品交換は不可となります。初期不良については商品到着後、3営業日以内にご連絡ください。</p>
+            <a href="https://www.rakuten.co.jp/liaanela/info.html#return_policy" target="_top"><span>※ 詳細についてはこちらをご参照ください。</span></a>
+            <h4 class="tit">お問合せ</h4>
+            <p><a href="mailto:info@lia-anela.com"><i class="far fa-envelope">info@lia-anela.com</i></a> (メール2営業日以内返信)</p>
+            <p>返信が届かない場合、再度ご連絡ください</p>
+            <p><i class="fas fa-phone"></i> 048-915-1221 電話受付 10:00～17:00</p>
+            <a href="https://ask.step.rakuten.co.jp/inquiry-form/?page=simple-inquiry-top&act=login&ms=500&shop_id=366223" target="_top">
+            <span>※ 詳細についてはこちらをご参照ください。</span></a>
+          </div>
+        </div>
+        <div class="col-md-3 col-12 holi-area">
+          <div>
+            <h4 class="tit">営業日について</h4>
+            <p>日曜日定休日</p>
+            <p>土・祝日は発送業務のみ</p>
+            <a href="https://www.rakuten.ne.jp/gold/liaanela/rakuraku/calendar20968/" target="_top"><span>※ 詳細についてはこちらをご参照ください。</span></a>    
+          </div>
+          
+          <div>
+            <h4 class="tit">配送について</h4>
+            <p>通常、ご注文日から翌、翌々営業日の発送となります。(銀振等前払いは除く)</p><p>あす楽対応は、現在行っておりません。</p>
+            <a href="https://www.rakuten.co.jp/liaanela/info.html#shipping" target="_top"><span>※ 詳細についてはこちらをご参照ください。</span></a>
+          </div>
+
+          <ul class="list-unstyled list-inline list-sns">
+            <li><a href="#"><i class="fab fa-2x fa-facebook-f"></i><span class="d-none">facebook</span></a></li>
+            <li><a href="#"><i class="fab fa-2x fa-instagram"></i><span class="d-none">instargram</span></a></li>
+          </ul> 
+        <div>
+      </div>
+      <div>
+          <p class="copy">
+            <img src="images/logo.png" width="100px" class="logo">© 2019 liaanela. Designed by liaanela
+          </p>
+      </div>
+      
+    </section>
+    </footer>
 
 
-<div id="guide"></div>
-<!-- <iframe src="footer.html" width="100%" height="1767" scrolling="no"></iframe> -->
+
+
+
 
   <script src="common/js/swiper.js"></script>
   <script type="text/javascript" src="common/js/common.js"></script>
-  <!-- <script>
-  (function(){
-      var ua = navigator.userAgent.toUpperCase();
-      if(ua.indexOf('IPHONE') != -1 || (ua.indexOf('ANDROID') != -1 && ua.indexOf('MOBILE') != -1)){
-    location.href = 'https://www.rakuten.ne.jp/gold/liaanela/smp/';
-      }
-  }());
-  </script> -->
 </body>
 </html>

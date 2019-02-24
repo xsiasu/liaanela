@@ -22,7 +22,7 @@ a, p, div, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6,table,tbody,tr,th,td {
 
 table.calendar{
 	width:100%;
-       font-size:14px;
+  font-size:14px;
 }
 table.calendar th {
  text-align: center;

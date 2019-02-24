@@ -1,37 +1,23 @@
-var swiper = new Swiper ('.swiper-container', {
+
+
+var swiper = new Swiper('.swiper-container', {
+  effect: 'fade',
   loop: true,
-  slidesPerView: 1.584,
+  slidesPerView: 1,
   spaceBetween: 0,
   centeredSlides : true,
-  autoplay:true,
-  speed:500,
+  speed:1500,
+  parallax: true,
   pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }
+    el: '.swiper-pagination',
+    type: 'fraction',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
 });
 
-var swiper = new Swiper ('.sp_swiper-container', {
-  loop: true,
-  spaceBetween: 0,
-  centeredSlides : true,
-  autoplay:true,
-  speed:500,
-  pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }
-});
 
 // 停止、開始でfunction書くのが面倒なので1つにまとめます。
 var movefun = function( event ){
@@ -45,26 +31,54 @@ window.addEventListener( 'touchmove' , movefun , { passive: false } );
 window.removeEventListener( 'touchmove' , movefun, { passive: false } );
 
 
-var header = {
-  init : function() {
 
-    let navItem = $('nav-item');
-    navItem.on('mouseenter', function(){
-      if(!$(this).hasClass("active_link")) {
-        $('.dropdown_container').hide();
-        $('.active_link').removeClass('.active_link')
-      }
+/*============================================================================
+  add headerNav by ksk 20190115
+==============================================================================*/
+var headerNav = {
+  init : function(){
+    // If a link has a dropdown, add sub menu toggle.
+    $('nav ul li a:not(:only-child)').click(function(e) {
+      $(this).siblings('.dropdown-container').toggle();
+      // Close one dropdown when selecting another
+      $('.dropdown-container').not($(this).siblings()).hide();
+      e.stopPropagation();
     });
-
-    navItem.on('mouseleave', function(){
-        $('.dropdown_container').hide();
-        $('.active_link').removeClass('.active_link')
-    })
-
+    // Clicking away from dropdown will remove the dropdown class
+    $('html').click(function() {
+      $('.dropdown-container').hide();
+    });
+    // Toggle open and close nav styles on click
+    $('#nav-toggle').click(function() {
+      $('nav ul').slideToggle();
+    });
+    // Hamburger to X toggle
+    $('#nav-toggle').on('click', function() {
+      this.classList.toggle('active');
+    });
   }
 }
 
 
-window.onload(function(){
-  header.init();
-})
+/*============================================================================
+  add somethings by ksk 20190115
+==============================================================================*/
+var featuredPromotions = {
+  init(){
+    if ($(window).width() > 768) {
+      $('.image-bar__overlay').hover(function(){
+        $(this).find('.detail-description').slideDown('100', function(){
+          $(this).addClass('reveal-details');
+        });
+      }, function(){
+        $(this).find('.detail-description').removeClass('reveal-details');
+        $(this).find('.detail-description').slideUp('100');
+      });
+    }
+  }
+};
+
+$(document).ready(function(){
+  headerNav.init();
+  featuredPromotions.init()
+});
