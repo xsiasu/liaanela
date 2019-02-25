@@ -64,7 +64,7 @@ var headerNav = {
   add somethings by ksk 20190115
 ==============================================================================*/
 var featuredPromotions = {
-  init(){
+  init : function() {
     if ($(window).width() > 768) {
       $('.image-bar__overlay').hover(function(){
         $(this).find('.detail-description').slideDown('100', function(){
@@ -78,7 +78,27 @@ var featuredPromotions = {
   }
 };
 
+
+var scrollTap = {
+  init : function() {
+    if ($(window).width() <= 768) {
+      $(window).bind('scroll', function() {
+        var navHeight = $( window ).height() - 70;
+          if ($(window).scrollTop() > navHeight) {
+            $('category-area').addClass('fixed');
+          }
+          else {
+            $('category-area').removeClass('fixed');
+          }
+      });
+    }
+  }  
+}
+
+
+
 $(document).ready(function(){
   headerNav.init();
-  featuredPromotions.init()
+  featuredPromotions.init();
+  scrollTop.init();
 });

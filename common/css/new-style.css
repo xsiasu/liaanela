@@ -5,6 +5,9 @@ a {
 
 .section-imagebar .image-bar__item {
   height: 475px; }
+  @media screen and (max-width: 768px) {
+    .section-imagebar .image-bar__item {
+      height: 350px; } }
 
 .list-inline > li {
   display: inline-block; }
@@ -20,11 +23,11 @@ a {
 .site-nav__label {
   display: inline-block;
   position: relative;
-  font-size: 16px;
+  font-size: 15px;
   height: 39px;
   padding: 0 5px;
   font-family: Montserrat, sans-serif; }
-  @media screen and (max-width: 799px) {
+  @media screen and (max-width: 768px) {
     .site-nav__label {
       display: block; } }
   .site-nav__label:after {
@@ -81,6 +84,22 @@ a {
   background-size: cover;
   background-color: #e2e2e2; }
 
+/* items */
+.list-items .item {
+  display: inline-block;
+  border-right: solid 1px #e6e6e6;
+  border-bottom: solid 1px #e6e6e6; }
+  .list-items .item .txt-account {
+    text-align: center;
+    padding: 15px 0; }
+    .list-items .item .txt-account .product-price {
+      font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      font-size: 1rem;
+      color: #189dff; }
+    .list-items .item .txt-account .product-name {
+      font-size: 1rem; }
+
+/**/
 .section-category .list-category {
   position: relative;
   overflow-x: auto;
@@ -89,6 +108,27 @@ a {
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
   text-align: center; }
+  .section-category .list-category li {
+    width: 80px;
+    margin: 5px 0 0 5px; }
+    .section-category .list-category li a {
+      position: relative;
+      display: block;
+      background-color: #f5f5f5;
+      border: 1px solid #ccc;
+      border-radius: 5px; }
+
+.section-slides .swiper-slide {
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  @media screen and (max-width: 768px) {
+    .section-slides .swiper-slide {
+      background-position: center center; } }
+  .section-slides .swiper-slide.slide-01 {
+    background-image: url(../../images/item-shirts-pink.jpg); }
+  .section-slides .swiper-slide.slide-02 {
+    background-image: url(../../images/item-shirts-slide.jpg); }
 
 .tit-area {
   position: relative; }
@@ -109,7 +149,7 @@ a {
   display: none;
   z-index: 999;
   background: #fff; }
-  @media screen and (max-width: 799px) {
+  @media screen and (max-width: 768px) {
     .dropdown-container {
       position: static;
       width: 100%; } }
@@ -141,7 +181,7 @@ section.inner-header-middle {
 section.inner-header {
   display: flex;
   min-height: 80px; }
-  @media screen and (max-width: 799px) {
+  @media screen and (max-width: 768px) {
     section.inner-header {
       display: block;
       min-height: auto;
@@ -154,20 +194,20 @@ section.inner-header {
     -ms-flex: 1;
     flex: 1;
     margin-top: 14px; }
-    @media screen and (max-width: 799px) {
+    @media screen and (max-width: 768px) {
       section.inner-header .logo-area {
         margin-top: 0;
         display: block;
         width: auto; } }
     section.inner-header .logo-area h1 a img {
       width: 150px; }
-      @media screen and (max-width: 799px) {
+      @media screen and (max-width: 768px) {
         section.inner-header .logo-area h1 a img {
           width: 100px; } }
   section.inner-header .nav-area {
     width: 70%;
     margin-top: 17px; }
-    @media screen and (max-width: 799px) {
+    @media screen and (max-width: 768px) {
       section.inner-header .nav-area {
         border-top: solid 1px #ccc;
         margin-top: 0;
@@ -180,7 +220,7 @@ section.inner-header {
     -ms-flex: 1;
     flex: 1;
     margin-top: 21px; }
-    @media screen and (max-width: 799px) {
+    @media screen and (max-width: 768px) {
       section.inner-header .srh-area {
         display: block;
         margin-top: 0;
@@ -210,7 +250,8 @@ section.inner-header {
       transition: all 0.3s linear;
       width: 100%;
       text-align: center;
-      text-shadow: 0 0 4px rgba(0, 0, 0, 0.4); }
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+      font-weight: 600; }
       .image-bar__overlay .image-bar__text .image-bar__caption:after {
         content: '';
         display: block;
@@ -219,14 +260,14 @@ section.inner-header {
         background: #fff;
         transition: width .5s ease, background-color .5s ease;
         margin: 10px auto auto auto; }
-        @media screen and (max-width: 799px) {
+        @media screen and (max-width: 768px) {
           .image-bar__overlay .image-bar__text .image-bar__caption:after {
             width: 50%; } }
     .image-bar__overlay .image-bar__text .detail-description {
       display: none;
       opacity: 0;
       transition: opacity 0.3s linear; }
-      @media screen and (max-width: 799px) {
+      @media screen and (max-width: 768px) {
         .image-bar__overlay .image-bar__text .detail-description {
           display: block;
           opacity: 1; } }
@@ -269,14 +310,25 @@ section.inner-header {
       .srh-area .wrap-btn button i:focus {
         color: #189dff; }
 
-.product .product-body .txt-title {
+.product .product-body .product-title {
   font-size: 1rem; }
 
-.product .product-body .txt-price {
+.product .product-body .product-price {
   color: #189dff; }
 
+/* slides */
 .swiper-slide {
   position: relative; }
+  @media screen and (max-width: 768px) {
+    .swiper-slide:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.05);
+      transition: background-color 0.25s linear; } }
   .swiper-slide .txt-account {
     position: absolute;
     top: 25%;
@@ -288,13 +340,35 @@ section.inner-header {
     .swiper-slide .txt-account .product-name {
       font-size: 2rem; }
     .swiper-slide .txt-account .product-price {
-      font-size: 2rem; }
+      font-size: 2rem;
+      font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
       .swiper-slide .txt-account .product-price strong {
         color: red; }
+    @media screen and (max-width: 768px) {
+      .swiper-slide .txt-account {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-9.9%);
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        z-index: 999; }
+        .swiper-slide .txt-account .product-tit {
+          font-size: 2rem;
+          color: #fff;
+          margin-bottom: 0;
+          font-weight: 600;
+          text-shadow: 0 0 4px rgba(0, 0, 0, 0.4); }
+        .swiper-slide .txt-account .product-name {
+          font-size: 1.5rem; }
+        .swiper-slide .txt-account .product-price {
+          font-size: 2rem; }
+          .swiper-slide .txt-account .product-price strong {
+            color: red; } }
 
-.list-items li:nth-child(2n-1) {
-  margin-bottom: 20px; }
-
+/* slides */
 .inner-footer {
   font-size: 0.8125rem;
   border-top: solid 1px #3a3636;
@@ -302,6 +376,9 @@ section.inner-header {
   background-position: center center;
   color: #6f6f6f;
   padding: 10px 40px 10px 40px; }
+  @media screen and (max-width: 768px) {
+    .inner-footer {
+      padding: 10px 15px 10px 15px; } }
   .inner-footer a {
     color: #2b9db1; }
     .inner-footer a:hover {
@@ -330,7 +407,7 @@ section.inner-header {
   height: 50px;
   width: 50px; }
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 768px) {
   .nav-mobile {
     display: block; }
   section.inner-header {
@@ -341,7 +418,7 @@ section.inner-header {
       section.inner-header .list-nav .nav-item {
         display: block !important; } }
 
-@media screen and (min-width: 799px) {
+@media screen and (min-width: 768px) {
   section.inner-header .list-nav {
     display: flex !important; } }
 
