@@ -11,6 +11,15 @@ $color-text-shadow: rgba(0,0,0,0.4);
 $breakpoint: 768px;
 $nav-height: 50px;
 $font-price :"SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$font-menu :'Skia','sans-serif'; 
+
+@font-face {
+  font-family: $font-menu;
+  font-style: normal;
+  font-weight: normal;
+  src: local('../font/Skia'), url('ufonts.com_skia.woff') format('woff');
+}
+
 
 a {
   color:$normal-fontColor;
@@ -43,7 +52,7 @@ a {
     font-size: 15px;
     height: 39px;
     padding: 0 5px;
-    font-family: Montserrat, sans-serif;
+    font-family: $font-menu;
     @media screen and (max-width: $breakpoint){
       display: block;
     }    
@@ -171,7 +180,7 @@ a {
 .dropdown-container {
   width: 100%;
   left: 0;
-  top: 159px;
+  top: 158px;
   position: absolute;
   display: none;
   z-index: 999;
