@@ -1,0 +1,16 @@
+2019-02-26T01:25:30.020Z - file: Created with ugly.1.1.10
+2019-02-26T01:25:30.023Z - file: Start date: Tue Feb 26 2019 10:25:30 GMT+0900 (GMT+09:00)
+2019-02-26T01:25:30.023Z - file: =======================================================
+2019-02-26T01:25:30.023Z - info: Verbosity: 2
+2019-02-26T01:25:30.023Z - info: Initializing...
+2019-02-26T01:25:30.085Z - info: Serving viewer at localhost:3333
+2019-02-26T01:25:30.093Z - info: Listening on stdin
+2019-02-26T01:25:35.740Z - error: uncaughtException: Expected chunk declaration, found "" instead. date=Tue Feb 26 2019 10:25:35 GMT+0900 (GMT+09:00), pid=17616, uid=null, gid=null, cwd=C:\Users\mp031\Repository\liaanela, execPath=C:\Program Files\nodejs\node.exe, version=v10.14.1, argv=[C:\Program Files\nodejs\node.exe, C:\Users\mp031\AppData\Roaming\npm\node_modules\ugly\bin\launcher.js], rss=34054144, heapTotal=21217280, heapUsed=9801600, external=43041, loadavg=[0, 0, 0], uptime=590192
+Error: Expected chunk declaration, found "" instead.
+    at Validator.validateLine (C:\Users\mp031\AppData\Roaming\npm\node_modules\ugly\lib\validator.js:124:8)
+    at ReadStream.<anonymous> (C:\Users\mp031\AppData\Roaming\npm\node_modules\ugly\lib\ugly.js:102:4)
+    at ReadStream.emit (events.js:182:13)
+    at addChunk (_stream_readable.js:283:12)
+    at readableAddChunk (_stream_readable.js:260:13)
+    at ReadStream.Readable.push (_stream_readable.js:219:10)
+    at TTY.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)

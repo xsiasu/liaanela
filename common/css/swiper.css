@@ -10,7 +10,7 @@
  * Released on: November 1, 2018
  */
 
- .swiper-slide img{
+ .swiper-container .swiper-slide img{
   
   height: 480px;
  }

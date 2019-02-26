@@ -86,9 +86,7 @@ a {
 
 /* items */
 .list-items .item {
-  display: inline-block;
-  border-right: solid 1px #e6e6e6;
-  border-bottom: solid 1px #e6e6e6; }
+  display: inline-block; }
   .list-items .item .txt-account {
     text-align: center;
     padding: 15px 0; }
@@ -133,8 +131,8 @@ a {
 .tit-area {
   position: relative; }
   .tit-area .tit {
-    padding: 40px 0 40px 0;
-    font-size: 2rem;
+    padding: 10px 0 10px 0;
+    font-size: 1.5rem;
     font-weight: 600; }
 
 /**/
@@ -148,17 +146,18 @@ a {
   position: absolute;
   display: none;
   z-index: 999;
-  background: #fff; }
+  background: #fff;
+  border-top: solid 1px #e6e6e6; }
   @media screen and (max-width: 768px) {
     .dropdown-container {
       position: static;
-      width: 100%; } }
+      width: 100%;
+      border-top: 0; } }
 
 section.inner-header-announce {
   background: #189dff; }
   section.inner-header-announce .notice {
     display: block;
-    color: #fff;
     margin: 0;
     padding: 10px;
     font-size: 1rem; }
@@ -198,7 +197,9 @@ section.inner-header {
       section.inner-header .logo-area {
         margin-top: 0;
         display: block;
-        width: auto; } }
+        width: auto; }
+        section.inner-header .logo-area h1 {
+          padding-left: 10px; } }
     section.inner-header .logo-area h1 a img {
       width: 150px; }
       @media screen and (max-width: 768px) {

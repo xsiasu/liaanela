@@ -96,9 +96,21 @@ var scrollTap = {
 }
 
 
+$('.category-swiper').each(function(){
+  new Swiper($(this), {
+    effect: 'slide',
+    slidesPerView: 5,
+    spaceBetween: 0,
+    speed:1500,
+  });
+});
+
+
+
 
 $(document).ready(function(){
   headerNav.init();
   featuredPromotions.init();
   scrollTop.init();
+  categorySwiper.init();
 });

@@ -1,9 +1,4 @@
-a {
-    color:#3d4246;
-    &:hover {
-        color:#189dff
-    }
-}
+$normal-fontColor : #3d4246;
 $primary-fontColor : #189dff;
 $white-fontColor : #fff;
 $primary-bgColor : #189dff;
@@ -16,6 +11,13 @@ $color-text-shadow: rgba(0,0,0,0.4);
 $breakpoint: 768px;
 $nav-height: 50px;
 $font-price :"SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+a {
+  color:$normal-fontColor;
+  &:hover {
+      color:$primary-fontColor
+  }
+}
 .section-imagebar .image-bar__item{
     height:475px;
     @media screen and (max-width: $breakpoint) {
@@ -102,8 +104,6 @@ $font-price :"SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "A
 /* items */
 .list-items .item {
   display: inline-block;
-  border-right:solid 1px #e6e6e6;
-  border-bottom:solid 1px #e6e6e6;
   .txt-account {
     text-align: center;
     padding:15px 0;
@@ -116,8 +116,6 @@ $font-price :"SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "A
       font-size: 1rem;
     }    
   }
-
-  
 }
 /**/
 .section-category .list-category {
@@ -139,7 +137,6 @@ $font-price :"SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "A
         border-radius: 5px;      
       }      
     }
-
 }
 
 .section-slides{
@@ -161,8 +158,8 @@ $font-price :"SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "A
 .tit-area {
     position: relative;
     .tit {
-        padding:40px 0 40px 0;
-        font-size:2rem;
+        padding:10px 0 10px 0;
+        font-size:1.5rem;
         font-weight:600
     }
 }
@@ -179,10 +176,11 @@ $font-price :"SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "A
   display: none;
   z-index: 999;
   background: #fff;
+  border-top:solid 1px #e6e6e6;
     @media screen and (max-width: $breakpoint){
       position: static;
       width: 100%;
-      
+      border-top:0;
     }     
     
 }
@@ -191,7 +189,6 @@ section.inner-header-announce {
     background:$primary-bgColor;
     .notice {
       display:block;
-      color:$white-fontColor;
       margin:0;
       padding:10px;
       font-size:1rem
@@ -230,11 +227,14 @@ section.inner-header {
       -webkit-flex: 1;
       -ms-flex: 1;
       flex: 1;   
-      margin-top:14px;   
+      margin-top:14px;  
       @media screen and (max-width: $breakpoint){
         margin-top:0;
         display: block;
         width: auto;
+        h1 {
+          padding-left:10px;
+        }
       }
       h1 a img {
         width: 150px;
