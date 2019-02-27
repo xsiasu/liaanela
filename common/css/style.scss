@@ -113,12 +113,12 @@ a {
   .txt-account {
     text-align: center;
     padding:5px 0 15px 0;
-    .product-price {
+    .txt-price {
       font-family: $font-price;
       font-size: 1rem;
-      color:$primary-fontColor
+      color:#ff3d3d
     }
-    .product-name {
+    .txt-name {
       font-size: 1rem;
     }    
   }
@@ -176,18 +176,24 @@ section.slide-container {
 }
 
 /**/
-.nav-item.active-link .dropdown-container {
-  display:block
+.nav-item {
+  border-bottom:solid 1px #e6e6e6;
+  &:hover {
+    background:#f2f2f2;
+  }
+  &.active-link .dropdown-container {
+    display:block
+  }
 }
+
 .dropdown-container {
   width: 100%;
   left: 0;
-  top: 158px;
+  top: 147px;
   position: absolute;
   display: none;
   z-index: 999;
-  background: #fff;
-  border-top:solid 1px #e6e6e6;
+  background: #f1f1f1;
     @media screen and (max-width: $breakpoint){
       position: static;
       width: 100%;
@@ -235,7 +241,7 @@ section.inner-header {
       background-color: #fff;
       box-shadow:0 -7px 19px rgba(0,0,0,.5);      
       display: block;
-      height: 54px;
+      min-height:57px;
       padding:0;
       transition:background-color 0.5s ease;
       &.shrink {
@@ -537,6 +543,7 @@ section.inner-header {
     .list-nav {
       display:none;
       background:#fff;
+      margin-bottom:0;
       .nav-item {
         display: block !important;
       }        

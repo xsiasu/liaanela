@@ -100,9 +100,9 @@ var scrollTap = {
 $('.category-swiper').each(function(){
   new Swiper($(this), {
     effect: 'slide',
-    slidesPerView: 3,
+    slidesPerView: 5,
     spaceBetween: 30,
-    speed:1500,
+    speed:1500
   });
 });
 

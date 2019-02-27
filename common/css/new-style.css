@@ -93,11 +93,11 @@ a {
   .list-items .item .txt-account {
     text-align: center;
     padding: 5px 0 15px 0; }
-    .list-items .item .txt-account .product-price {
+    .list-items .item .txt-account .txt-price {
       font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
       font-size: 1rem;
-      color: #189dff; }
-    .list-items .item .txt-account .product-name {
+      color: #ff3d3d; }
+    .list-items .item .txt-account .txt-name {
       font-size: 1rem; }
 
 /**/
@@ -145,18 +145,21 @@ section.slide-container {
     font-weight: 600; }
 
 /**/
-.nav-item.active-link .dropdown-container {
-  display: block; }
+.nav-item {
+  border-bottom: solid 1px #e6e6e6; }
+  .nav-item:hover {
+    background: #f2f2f2; }
+  .nav-item.active-link .dropdown-container {
+    display: block; }
 
 .dropdown-container {
   width: 100%;
   left: 0;
-  top: 158px;
+  top: 147px;
   position: absolute;
   display: none;
   z-index: 999;
-  background: #fff;
-  border-top: solid 1px #e6e6e6; }
+  background: #f1f1f1; }
   @media screen and (max-width: 768px) {
     .dropdown-container {
       position: static;
@@ -199,7 +202,7 @@ section.inner-header {
       background-color: #fff;
       box-shadow: 0 -7px 19px rgba(0, 0, 0, 0.5);
       display: block;
-      height: 54px;
+      min-height: 57px;
       padding: 0;
       transition: background-color 0.5s ease; }
       section.inner-header.shrink {
@@ -437,7 +440,8 @@ section.inner-header {
     position: relative; }
     section.inner-header .list-nav {
       display: none;
-      background: #fff; }
+      background: #fff;
+      margin-bottom: 0; }
       section.inner-header .list-nav .nav-item {
         display: block !important; }
   .pagetop {
@@ -481,3 +485,16 @@ section.inner-header {
       transform: rotate(45deg); }
     #nav-toggle.active span:after {
       transform: rotate(-45deg); }
+
+/*dddd*/
+.contents-list a .item-img img {
+  transition: all 1s ease-in-out 0s;
+  -moz-transition: all 1s ease-in-out 0s;
+  -webkit-transition: all 1s ease-in-out 0s;
+  -o-transition: all 1s ease-in-out 0s; }
+
+.contents-list a:hover .item-img img {
+  transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2); }
