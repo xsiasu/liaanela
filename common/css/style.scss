@@ -1,7 +1,7 @@
 $normal-fontColor : #3d4246;
 $primary-fontColor : #189dff;
 $white-fontColor : #fff;
-$primary-bgColor : #189dff;
+$primary-bgColor : #f2f2f2;
 $grey-bgColor : #fafafa;
 $imagebar-color-01:#96d2dc;
 $imagebar-color-02:#dddede;
@@ -79,10 +79,7 @@ a {
 
 .list-category li a img {width: 75px;}
 
-.section-imagebar .row .col-md,
-.section-newItems .row .col-md-4,
-.section-rankingBest .row .col-md-4,
-.section-newItems .row .col-6 {padding:0}
+.section-imagebar .row .col-md {padding:0}
 
 .section-imagebar .imagebar-01 .image-bar__item{
     background: url(../../images/item-blue.jpg);
@@ -115,7 +112,7 @@ a {
   display: inline-block;
   .txt-account {
     text-align: center;
-    padding:15px 0;
+    padding:5px 0 15px 0;
     .product-price {
       font-family: $font-price;
       font-size: 1rem;
@@ -172,7 +169,7 @@ section.slide-container {
 .tit-area {
     position: relative;
     .tit {
-        padding:10px 0 10px 0;
+        padding:40px 0 10px 0;
         font-size:1.5rem;
         font-weight:600
     }
@@ -204,8 +201,11 @@ section.inner-header-announce {
     .notice {
       display:block;
       margin:0;
-      padding:10px;
-      font-size:1rem
+      padding:4px;
+      font-size:1rem;
+      @media screen and (max-width: $breakpoint){
+        font-size: 0.75rem
+      }
     }
 }
 section.inner-header-middle {
@@ -230,9 +230,19 @@ section.inner-header {
     display: flex;  
     min-height:80px;
     @media screen and (max-width: $breakpoint){
+      position: fixed;
+      z-index: 100;
+      background-color: #fff;
+      box-shadow:0 -7px 19px rgba(0,0,0,.5);      
       display: block;
-      min-height: auto;
+      height: 54px;
       padding:0;
+      transition:background-color 0.5s ease;
+      &.shrink {
+        background-color: #ffe9fc;
+        position:fixed;
+        top:0;
+      }
     }      
     .logo-area {
       -webkit-box-flex: 1;
@@ -251,9 +261,9 @@ section.inner-header {
         }
       }
       h1 a img {
-        width: 150px;
+        width: 130px;
         @media screen and (max-width: $breakpoint)  {
-          width: 100px;
+          width: 110px;
         }
       }
 
@@ -526,16 +536,26 @@ section.inner-header {
     position: relative;
     .list-nav {
       display:none;
+      background:#fff;
       .nav-item {
         display: block !important;
       }        
     }
   }
+
+  .pagetop {
+    display: inline-block;
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    z-index: 9999;
+  }  
 }
 @media screen and (min-width: $breakpoint) {
   // Hamburger nav visible on mobile only
 
   section.inner-header {
+    
     .list-nav {
       display:flex !important;
 
@@ -557,7 +577,7 @@ section.inner-header {
     width: 30px;
     position: absolute;
     display: block;
-    background: $primary-fontColor;
+    background: #2c2d2d;
     content: '';
     transition: all 300ms ease-in-out;
   }
