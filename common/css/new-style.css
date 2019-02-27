@@ -122,6 +122,12 @@ a {
       border: 1px solid #ccc;
       border-radius: 5px; }
 
+section.slide-container {
+  width: 1110px;
+  overflow: hidden;
+  display: block;
+  margin: 0 auto; }
+
 .section-slides .swiper-slide {
   height: 500px;
   background-repeat: no-repeat;
