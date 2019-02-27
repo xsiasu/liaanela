@@ -1,0 +1,46 @@
+{
+	"newitem": {
+        "barrack": {
+            "product-name": "blue",
+            "width": 200,
+            "height": 200
+        },
+        "mine": {
+            "product-name": "yellow",
+            "width": 200,
+            "height": 100
+        },
+        "gas": {
+            "product-name": "red",
+            "width": 100,
+            "height": 100
+        },
+        "townhall": {
+            "product-name": "black",
+            "width": 200,
+            "height": 200
+        }
+	},
+	"newitem": {
+        "barrack": {
+            "product-name": "blue",
+            "width": 200,
+            "height": 200
+        },
+        "mine": {
+            "product-name": "yellow",
+            "width": 200,
+            "height": 100
+        },
+        "gas": {
+            "product-name": "red",
+            "width": 100,
+            "height": 100
+        },
+        "townhall": {
+            "product-name": "black",
+            "width": 200,
+            "height": 200
+        }
+	}	
+}
