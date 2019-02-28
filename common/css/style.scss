@@ -124,12 +124,7 @@ a {
   }
 }
 /**/
-#content2,
-#content3,
-#content4,
-#content5,
-#content6,
-#content7 { display: none; }
+
 
 .section-category .list-category {
     position: relative;
@@ -636,3 +631,11 @@ section.inner-header {
 //   -webkit-transform: scale(1.2);
 //   -o-transform: scale(1.2);  
 // }
+
+
+.carousel-cell {
+  width: 20%;
+}
+.carousel-cell-100 {
+  width: 100%;
+}

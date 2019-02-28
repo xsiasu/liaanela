@@ -36,42 +36,22 @@ var headerNav = {
 };
 
 
-var categorySlider = {
-  init :  function() {
-    $('.owl-carousel').each(function(index,value){
-      var cate = $(this);
-      cate.owlCarousel({
-        loop: true,
-        margin: 10,
-        responsiveClass: true,
-        nav:true,
-        responsive: {
-          0: {
-            items: 2,
-            nav: true
-          },
-          600: {
-            items: 3,
-            nav: false
-          },
-          1000: {
-            items: 5,
-            nav: true,
-            loop: false,
-            margin: 20
-          }
-        }
-      })
-    })    
-  }
-};
+// var categorySlider = {
+//   init :  function() {
+//     $('.main-carousel').each(function(index,value){
+//       var cate = $(this);
+//       cate.flickity({
+//         // options
+//         cellAlign: 'left',
+//         contain: true
+//       });
+//     })    
+//   }
+// };
 
 var bigSlider = {
   init :  function() {
-    $('.big-slider').each(function(index,value){
-      var big = $(this);
-      big.owlCarousel()
-    })    
+  
   }
 };
 
@@ -110,12 +90,6 @@ var scrollTap = {
   }  
 };
 
-
-
-
-// $(".accordion").on("click", ".accordion-header", function() {
-//   $(this).toggleClass("active").next().slideToggle();
-// });
 
 $("#user-nav-tabs li").on('click', function(e) {
   var targetLink = $(e.currentTarget.children[0]).attr("href").slice(1);
@@ -187,12 +161,56 @@ function pageTop() {
   });  
 };
 
-pageTop();
-fixedAni();
+
 
 $(document).ready(function(){  
-  categorySlider.init();
+  pageTop();
+fixedAni();
+  // categorySlider.init();
   headerNav.init();
   featuredPromotions.init();
-  bigSlider.init();
+  // bigSlider.init();
+
+
+    $('.main-carousel-1').flickity({
+      // options
+      cellAlign: 'left',
+      contain: true     
+    }); 
+    $('.main-carousel-2').flickity({
+      // options
+      cellAlign: 'left',
+      contain: true     
+      });  
+    $('.main-carousel-3').flickity({
+      // options
+      cellAlign: 'left',
+      contain: true     
+      });  
+    $('.main-carousel-4').flickity({
+      // options
+      cellAlign: 'left',
+      contain: true     
+      });  
+    $('.main-carousel-5').flickity({
+      // options
+      cellAlign: 'left',
+      contain: true     
+      }); 
+      $('.main-carousel-6').flickity({
+        // options
+        cellAlign: 'left',
+        contain: true     
+        });    
+        $('.main-carousel-7').flickity({
+          // options
+          cellAlign: 'left',
+          contain: true     
+          });                                              
+    $('.big-carousel').flickity({
+    // options
+    cellAlign: 'left',
+    contain: true     
+    });
+ 
 });
