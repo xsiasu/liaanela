@@ -124,6 +124,13 @@ a {
   }
 }
 /**/
+#content2,
+#content3,
+#content4,
+#content5,
+#content6,
+#content7 { display: none; }
+
 .section-category .list-category {
     position: relative;
     overflow-x: auto;
@@ -144,35 +151,20 @@ a {
       }      
     }
 }
-section.slide-container {
-  width: 1110px;
-  overflow: hidden;
-  display: block;
-  margin:0 auto;
-}
-.section-slides{
-  .swiper-slide {
-    height: 500px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    @media screen and (max-width: $breakpoint) {
-      background-position: center center;
-    }
-    &.slide-01 {
-      background-image:url(../../images/item-shirts-pink.jpg);
-    }
-    &.slide-02 {
-      background-image:url(../../images/item-shirts-slide.jpg);
-    }    
-  }
-} 
+
 .tit-area {
+    overflow: hidden;
     position: relative;
+    border-bottom:solid 1px #e6e6e6;
+    margin-bottom:10px;
     .tit {
         padding:40px 0 10px 0;
         font-size:1.5rem;
         font-weight:600
     }
+    .more {
+      margin-top:47px;
+    };
 }
 
 /**/
@@ -199,7 +191,6 @@ section.slide-container {
       width: 100%;
       border-top:0;
     }     
-    
 }
 
 section.inner-header-announce {
@@ -234,18 +225,20 @@ section.inner-header-middle {
 
 section.inner-header {
     display: flex;  
-    min-height:80px;
+    height:80px;
     @media screen and (max-width: $breakpoint){
       position: fixed;
       z-index: 100;
       background-color: #fff;
       box-shadow:0 -7px 19px rgba(0,0,0,.5);      
       display: block;
-      min-height:57px;
+      height:49px;
       padding:0;
       transition:background-color 0.5s ease;
+      transition:all .2s;
       &.shrink {
-        background-color: #ffe9fc;
+        height:49px;
+        background-color: #f2f2f2;
         position:fixed;
         top:0;
       }
@@ -263,16 +256,18 @@ section.inner-header {
         display: block;
         width: auto;
         h1 {
+          position: relative;
+          top:-7px;
           padding-left:10px;
+          margin-bottom:0;
         }
       }
       h1 a img {
         width: 130px;
         @media screen and (max-width: $breakpoint)  {
-          width: 110px;
+          width: 95px;
         }
       }
-
     }
     .nav-area {
       width:70%;
@@ -385,10 +380,6 @@ section.inner-header {
 }
 /*// box hover effect moudle */
 
-
-
-
-
 .srh-area {
   position: relative;
   .form-group-lia {
@@ -398,7 +389,6 @@ section.inner-header {
       width: 235px;
     }
   }
-
   .wrap-btn {
     position: absolute;
     right:0;
@@ -452,7 +442,8 @@ section.inner-header {
       font-size:2rem;
       font-family:$font-price;
       strong {
-        color:red;
+        color:#ff3d3d;
+        font-weight: normal
       }
     }
     @media screen and (max-width: $breakpoint) {
@@ -546,6 +537,14 @@ section.inner-header {
       margin-bottom:0;
       .nav-item {
         display: block !important;
+        .nav-link {
+          position: relative;
+          i {
+            position:absolute;
+            right:0;
+            top:10px;
+          }
+        }
       }        
     }
   }
@@ -566,6 +565,16 @@ section.inner-header {
     .list-nav {
       display:flex !important;
 
+    }
+  }
+  .dimmed {
+    display: none;
+    &.active {
+      background:rgba(0,0,0,.5);
+      position:absolute;
+      width: 100%;
+      left:0;
+      top:0;
     }
   }
 }
@@ -611,16 +620,19 @@ section.inner-header {
 
 
 
-/*dddd*/
-.contents-list a .item-img img {
-  transition: all 1s ease-in-out 0s;
-  -moz-transition: all 1s ease-in-out 0s;
-  -webkit-transition: all 1s ease-in-out 0s;
-  -o-transition: all 1s ease-in-out 0s;  
-}
-.contents-list a:hover .item-img img {
-  transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  -o-transform: scale(1.2);  
-}
+/*common*/
+// a.item {
+//   overflow: hidden;
+// }
+// a.item img {
+//   transition: all 1s ease-in-out 0s;
+//   -moz-transition: all 1s ease-in-out 0s;
+//   -webkit-transition: all 1s ease-in-out 0s;
+//   -o-transition: all 1s ease-in-out 0s;  
+// }
+// a.item:hover  img {
+//   transform: scale(1.2);
+//   -moz-transform: scale(1.2);
+//   -webkit-transform: scale(1.2);
+//   -o-transform: scale(1.2);  
+// }

@@ -1,34 +1,9 @@
 
 
-var swiper = new Swiper('.swiper-container', {
-  effect: 'fade',
-  loop: true,
-  slidesPerView: 1,
-  spaceBetween: 0,
-  centeredSlides : true,
-  speed:1500,
-  parallax: true,
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'fraction',
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  }
-});
 
 
-// 停止、開始でfunction書くのが面倒なので1つにまとめます。
-var movefun = function( event ){
-  event.preventDefault();
-}
 
-// スクロール停止の処理
-window.addEventListener( 'touchmove' , movefun , { passive: false } );
 
-// スクロール停止することを停止する処理
-window.removeEventListener( 'touchmove' , movefun, { passive: false } );
 
 
 
@@ -58,8 +33,47 @@ var headerNav = {
       this.classList.toggle('active');
     });
   }
-}
+};
 
+
+var categorySlider = {
+  init :  function() {
+    $('.owl-carousel').each(function(index,value){
+      var cate = $(this);
+      cate.owlCarousel({
+        loop: true,
+        margin: 10,
+        responsiveClass: true,
+        nav:true,
+        responsive: {
+          0: {
+            items: 2,
+            nav: true
+          },
+          600: {
+            items: 3,
+            nav: false
+          },
+          1000: {
+            items: 5,
+            nav: true,
+            loop: false,
+            margin: 20
+          }
+        }
+      })
+    })    
+  }
+};
+
+var bigSlider = {
+  init :  function() {
+    $('.big-slider').each(function(index,value){
+      var big = $(this);
+      big.owlCarousel()
+    })    
+  }
+};
 
 /*============================================================================
   add somethings by ksk 20190115
@@ -94,35 +108,40 @@ var scrollTap = {
       });
     }
   }  
-}
+};
 
 
-$('.category-swiper').each(function(){
-  new Swiper($(this), {
-    effect: 'slide',
-    slidesPerView: 5,
-    spaceBetween: 30,
-    speed:1500
+
+
+// $(".accordion").on("click", ".accordion-header", function() {
+//   $(this).toggleClass("active").next().slideToggle();
+// });
+
+$("#user-nav-tabs li").on('click', function(e) {
+  var targetLink = $(e.currentTarget.children[0]).attr("href").slice(1);
+  var content_map = {
+      c1  : "#content1",
+      c2  : "#content2",
+      c3  : "#content3",
+      c4  : "#content4",
+      c5  : "#content5",
+      c6  : "#content6",
+      c7  : "#content7"                        
+  }
+  $(e.currentTarget).siblings().removeClass("active");
+  $.each(content_map, function(hash, elid) {
+      if (hash == targetLink) {
+          $(elid).show();
+          $(e.currentTarget).addClass("active");
+      } else {
+          $(elid).hide();
+      }
   });
-});
-
-$(".accordion").on("click", ".accordion-header", function() {
-  $(this).toggleClass("active").next().slideToggle();
-});
-
-$('ul.tabs li').click(function(){
-  var tab_id = $(this).attr('data-tab');
-
-  $('ul.tabs li').removeClass('current');
-  $('.tab-content').removeClass('current');
-
-  $(this).addClass('current');
-  $("#"+tab_id).addClass('current');
 });
 
 var getCurrentScroll = function() {
   return window.pageYOffset || document.documentElement.scrollTop;
-}
+};
 
 function fixedAni() {
   var shrinkHeader = 100;
@@ -130,14 +149,17 @@ function fixedAni() {
   
   $(window).scroll(function(){
      var scroll = getCurrentScroll();   
+     var logo = $('.logo','.logo-area');
      if (scroll>=shrinkHeader) {
        innerHeader.addClass('shrink');
+       logo.attr('src','images/logo-white.png');
      }
      else {
        innerHeader.removeClass('shrink');
+       logo.attr('src','images/logo.png');
      }       
   });
-}
+};
 
 function pageTop() {
   var browserWidth = window.innerWidth;
@@ -163,14 +185,14 @@ function pageTop() {
     }, 1000);
     return false;
   });  
-}
+};
 
 pageTop();
 fixedAni();
 
-$(document).ready(function(){
+$(document).ready(function(){  
+  categorySlider.init();
   headerNav.init();
   featuredPromotions.init();
-  scrollTop.init();
-  categorySwiper.init();
+  bigSlider.init();
 });

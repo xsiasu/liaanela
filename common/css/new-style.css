@@ -101,6 +101,14 @@ a {
       font-size: 1rem; }
 
 /**/
+#content2,
+#content3,
+#content4,
+#content5,
+#content6,
+#content7 {
+  display: none; }
+
 .section-category .list-category {
   position: relative;
   overflow-x: auto;
@@ -119,30 +127,17 @@ a {
       border: 1px solid #ccc;
       border-radius: 5px; }
 
-section.slide-container {
-  width: 1110px;
-  overflow: hidden;
-  display: block;
-  margin: 0 auto; }
-
-.section-slides .swiper-slide {
-  height: 500px;
-  background-repeat: no-repeat;
-  background-size: cover; }
-  @media screen and (max-width: 768px) {
-    .section-slides .swiper-slide {
-      background-position: center center; } }
-  .section-slides .swiper-slide.slide-01 {
-    background-image: url(../../images/item-shirts-pink.jpg); }
-  .section-slides .swiper-slide.slide-02 {
-    background-image: url(../../images/item-shirts-slide.jpg); }
-
 .tit-area {
-  position: relative; }
+  overflow: hidden;
+  position: relative;
+  border-bottom: solid 1px #e6e6e6;
+  margin-bottom: 10px; }
   .tit-area .tit {
     padding: 40px 0 10px 0;
     font-size: 1.5rem;
     font-weight: 600; }
+  .tit-area .more {
+    margin-top: 47px; }
 
 /**/
 .nav-item {
@@ -194,7 +189,7 @@ section.inner-header-middle {
 
 section.inner-header {
   display: flex;
-  min-height: 80px; }
+  height: 80px; }
   @media screen and (max-width: 768px) {
     section.inner-header {
       position: fixed;
@@ -202,11 +197,13 @@ section.inner-header {
       background-color: #fff;
       box-shadow: 0 -7px 19px rgba(0, 0, 0, 0.5);
       display: block;
-      min-height: 57px;
+      height: 49px;
       padding: 0;
-      transition: background-color 0.5s ease; }
+      transition: background-color 0.5s ease;
+      transition: all .2s; }
       section.inner-header.shrink {
-        background-color: #ffe9fc;
+        height: 49px;
+        background-color: #f2f2f2;
         position: fixed;
         top: 0; } }
   section.inner-header .logo-area {
@@ -223,12 +220,15 @@ section.inner-header {
         display: block;
         width: auto; }
         section.inner-header .logo-area h1 {
-          padding-left: 10px; } }
+          position: relative;
+          top: -7px;
+          padding-left: 10px;
+          margin-bottom: 0; } }
     section.inner-header .logo-area h1 a img {
       width: 130px; }
       @media screen and (max-width: 768px) {
         section.inner-header .logo-area h1 a img {
-          width: 110px; } }
+          width: 95px; } }
   section.inner-header .nav-area {
     width: 70%;
     margin-top: 17px; }
@@ -368,7 +368,8 @@ section.inner-header {
       font-size: 2rem;
       font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
       .swiper-slide .txt-account .product-price strong {
-        color: red; }
+        color: #ff3d3d;
+        font-weight: normal; }
     @media screen and (max-width: 768px) {
       .swiper-slide .txt-account {
         position: absolute;
@@ -444,6 +445,12 @@ section.inner-header {
       margin-bottom: 0; }
       section.inner-header .list-nav .nav-item {
         display: block !important; }
+        section.inner-header .list-nav .nav-item .nav-link {
+          position: relative; }
+          section.inner-header .list-nav .nav-item .nav-link i {
+            position: absolute;
+            right: 0;
+            top: 10px; }
   .pagetop {
     display: inline-block;
     position: fixed;
@@ -453,7 +460,15 @@ section.inner-header {
 
 @media screen and (min-width: 768px) {
   section.inner-header .list-nav {
-    display: flex !important; } }
+    display: flex !important; }
+  .dimmed {
+    display: none; }
+    .dimmed.active {
+      background: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0; } }
 
 #nav-toggle {
   position: absolute;
@@ -486,15 +501,4 @@ section.inner-header {
     #nav-toggle.active span:after {
       transform: rotate(-45deg); }
 
-/*dddd*/
-.contents-list a .item-img img {
-  transition: all 1s ease-in-out 0s;
-  -moz-transition: all 1s ease-in-out 0s;
-  -webkit-transition: all 1s ease-in-out 0s;
-  -o-transition: all 1s ease-in-out 0s; }
-
-.contents-list a:hover .item-img img {
-  transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  -o-transform: scale(1.2); }
+/*common*/
